@@ -1,0 +1,32 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+nav ul {
+    width: 100%;
+    display: flex;
+
+  justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    text-transform: uppercase   ;
+    font-weight: 100;
+    color: black;
+    text-decoration-style: none;
+    list-style-type: none;
+    padding: 0;
+  }
+
+header {
+  border: grey 1px solid;
+}
+
+input {
+ height: 20px;
+ width: 800px;
+}
+
+ .searchContainer {
+  height: 20px;
+  width: 900px;
+}

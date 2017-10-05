@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="xposure">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xposure</title>
+    <link rel="stylesheet" href="./component/home/home.css">
+    <link rel="stylesheet" href="./component/login/login.css">
+    <link rel="stylesheet" href="./component/event/event.css">
+    <link rel="stylesheet" href="./component/profile/profile.css">
+    <link rel="stylesheet" href="./component/searchEvent/searchEvent.css">
+    <link rel="stylesheet" href="./mainStyle.css">
+</head>
+
+<header>
+  <nav ng-controller="searchEventCtrl">
+    <ul>
+      <form class="searchContainer">
+        <input ng-model="city" class="searchBarEvent" placeholder="Search Events"/>
+        <button ng-click="searchEvents(city)" ui-sref="searchEvent">Submit</button>
+     </form>
+      <li ui-sref="home"><a>Browse Events</a></li>
+      <li ui-sref="profile"><a>Profile</a></li>
+ <!-- <img src="" /> -->
+      <li ui-sref="event"><a>Create Event</a></li>
+   </ul>
+ </nav>
+</header>
+
+<body>
+    <ui-view></ui-view>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+<!-- <script src="https://www.eventbriteapi.com/v3/users/me/?token=VS4PG47YHJGSWEJUEE3Y"></script>
+<script src="https://www.eventbriteapi.com/v3/events/:id/?token={your api key}"></script> -->
+<script src="./app.module.js"></script>
+<script src="./app.routes.js"></script>
+<script src="./component/home/homeCtrl.js"></script>
+<script src="./component/login/mainCtrl.js"></script>
+<script src="./component/event/eventCtrl.js"></script>
+<script src="./component/profile/profileCtrl.js"></script>
+<script src="./component/searchEvent/searchEventCtrl.js"></script>
+<script src="./component/login/mainSrvc.js"></script>
+</html>
