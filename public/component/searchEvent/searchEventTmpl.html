@@ -1,1 +1,15 @@
 <h1>Searched Events</h1>
+
+<div class="eventList" ng-repeat="event in events track by $index">
+
+  <img class="spotImg" ng-src="{{event.logo.original.url}}" />
+      <div class ="eventDetailContain">
+        <h4 class="spotName"><span class="infoText">NAME:</span> {{event.name.text}}</h4>
+        <p class= "infoEvent"><span class="infoText">LOCATION:</span> {{event.start.timezone}} <span class="infoText">TIME:</span> {{event.start.local | date: 'medium'}} <span class="infoText">TO</span> {{event.end.local  | date: 'medium'}}</p>
+        <hr />
+        <p class="spotNum"><span class="infoText">DESCRIPTION:</span> {{event.description.text}}</p>
+      </div>
+
+
+
+</div>
