@@ -21,9 +21,14 @@ angular.module('xposure').config(($urlRouterProvider, $stateProvider) => {
             controller: 'mainCtrl'
         })
         .state('searchEvent', {
-            url: '/searchEvent',
+            url: '/searchEvent/:city',
             templateUrl: './component/searchEvent/searchEventTmpl.html',
-            controller: 'searchEventCtrl'
+            controller: 'searchEventCtrl',
+            resolve: {
+              response: function(mainSrvc, $stateParams){
+                return mainSrvc.searchEvents($stateParams.city);
+              }
+            }
         })
         .state('profile', {
             url: '/profile',

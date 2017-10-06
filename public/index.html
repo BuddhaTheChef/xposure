@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="./component/searchEvent/searchEvent.css">
     <link rel="stylesheet" href="./mainStyle.css">
 </head>
-
+<body>
 <header>
-  <nav ng-controller="searchEventCtrl">
+  <nav ng-controller="indexCtrl">
     <ul>
       <form class="searchContainer">
         <input ng-model="city" class="searchBarEvent" placeholder="Search Events"/>
-        <button ng-click="searchEvents(city)" ui-sref="searchEvent">Submit</button>
+        <button ui-sref="searchEvent({city: city})">Submit</button>
      </form>
       <li ui-sref="home"><a>Browse Events</a></li>
       <li ui-sref="profile"><a>Profile</a></li>
@@ -27,7 +27,7 @@
  </nav>
 </header>
 
-<body>
+
     <ui-view></ui-view>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
@@ -37,6 +37,7 @@
 <script src="./app.module.js"></script>
 <script src="./app.routes.js"></script>
 <script src="./component/home/homeCtrl.js"></script>
+<script src="./indexCtrl.js"></script>
 <script src="./component/login/mainCtrl.js"></script>
 <script src="./component/event/eventCtrl.js"></script>
 <script src="./component/profile/profileCtrl.js"></script>

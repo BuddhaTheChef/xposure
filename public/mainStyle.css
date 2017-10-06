@@ -30,3 +30,69 @@ input {
   height: 20px;
   width: 900px;
 }
+
+.createUserTag{
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.home-city-display{
+  margin-left: 40vh;
+}
+
+.spotImg{
+  padding: 10px 10px;
+  height: 150px;
+  width: 200px;
+}
+.spotNum{
+  height: 75px;
+    overflow: auto;
+    flex-direction: row;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.spotName{
+   justify-content: center;
+    margin-top: 11px;
+    margin-bottom: 0px;
+}
+.infoEvent{
+margin-top: 10px;
+margin-bottom: 0px;
+}
+
+.infoText{
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.eventDetailContain{
+  flex-direction: row;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+#inputUser input{
+  margin-top: 20px;
+
+  width: 300px;
+}
+
+#inputUser {
+  text-align: center;
+}
+
+.home-header{
+  text-align: center;
+}
+
+.eventList {
+  margin: 30px 370px 20px 370px;
+  border: solid grey 1px;
+  display: flex;
+  flex-wrap:;
+  }
+
+  /*/////////////////////////////////////////////////////////*/
