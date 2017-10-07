@@ -10,6 +10,22 @@
     <link rel="stylesheet" href="./component/profile/profile.css">
     <link rel="stylesheet" href="./component/searchEvent/searchEvent.css">
     <link rel="stylesheet" href="./mainStyle.css">
+    <!-- ////////////firebase///////////// -->
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-storage.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB5hvwxe9-BUwe8ZmMB-jGTfahBuhv_w3I",
+    authDomain: "xposure-bed60.firebaseapp.com",
+    databaseURL: "https://xposure-bed60.firebaseio.com",
+    projectId: "xposure-bed60",
+    storageBucket: "xposure-bed60.appspot.com",
+    messagingSenderId: "208950384059"
+  };
+  firebase.initializeApp(config);
+
+</script>
 </head>
 <body>
 <header>
@@ -42,5 +58,6 @@
 <script src="./component/event/eventCtrl.js"></script>
 <script src="./component/profile/profileCtrl.js"></script>
 <script src="./component/searchEvent/searchEventCtrl.js"></script>
+<script src="ng-file-upload.js"></script>
 <script src="./component/login/mainSrvc.js"></script>
 </html>

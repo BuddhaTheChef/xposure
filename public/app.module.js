@@ -1,1 +1,1 @@
-angular.module('xposure', ['ui.router']);
+angular.module('xposure', ['ui.router','ngFileUpload']);
