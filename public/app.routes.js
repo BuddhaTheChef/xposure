@@ -33,7 +33,12 @@ angular.module('xposure').config(($urlRouterProvider, $stateProvider) => {
         .state('profile', {
             url: '/profile',
             templateUrl: './component/profile/profileTmpl.html',
-            controller: 'profileCtrl'
+            controller: 'profileCtrl',
+            resolve: {
+                user: mainSrvc => mainSrvc.getUser()
+                    .then(response => response.data)
+                    .catch(err => err)
+            }
         })
         .state('event', {
             url: '/event',

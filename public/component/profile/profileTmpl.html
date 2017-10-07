@@ -1,1 +1,22 @@
-<h1>Profile PAGE</h1>
+<div class=profileContentTop>
+  <h1 class="progilePageHeader">Profile PAGE</h1>
+
+  <form id = "inputUser">
+      <input type="text" class="" ng-model="person.first" placeholder="first name" />
+      <input type="text" class="" ng-model="person.last" placeholder="last name" />
+      <input type="text" class="" ng-model="person.email" placeholder="email" />
+      <button  ng-click="updateUser(person)" class="search-button btn btn-primary" ui-sref="home"> Submit </button>
+  </form>
+
+
+<div>
+  <h1 class="profileFirstandLast">{{user.first_name}} {{user.last_name}}</h1>
+</div>
+<div>
+  <h3  class="profileEmail">{{user.email}}</h3>
+</div>
+<div class="eventContain">
+  <h5 >Saved Events</h5>  <h5>Created Events</h5>
+</div>
+
+</div>

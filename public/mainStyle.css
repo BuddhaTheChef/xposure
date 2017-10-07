@@ -95,4 +95,32 @@ margin-bottom: 0px;
   flex-wrap:;
   }
 
-  /*/////////////////////////////////////////////////////////*/
+  /*///////////////////////////////profile page//////////////////////////*/
+
+.profileContentTop{
+  border: solid grey 1px;
+}
+
+.progilePageHeader{
+  text-align: center;
+}
+
+.profileFirstandLast{
+  margin-top: 30vh;
+  text-align: center;
+}
+
+.profileEmail{
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.eventContain{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+/*///////////////////////////////create Event page//////////////////////////*/
