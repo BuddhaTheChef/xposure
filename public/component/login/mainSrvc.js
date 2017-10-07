@@ -4,10 +4,11 @@ angular.module('xposure').service('mainSrvc', function($http) {
     this.getUser = () => $http.get('/auth/me');
 
     this.getEvents = () => $http.get('https://www.eventbriteapi.com/v3/events/search/?location.address=dallas,tx&location.within=50mi&sort_by=best&token=VS4PG47YHJGSWEJUEE3Y')
-    .then(response =>{
+    .then(response => {
       console.log(response.data.events);
       return response.data.events;
     });
+
     this.createUser = (user) => {
       console.log(user)
 
@@ -18,7 +19,7 @@ angular.module('xposure').service('mainSrvc', function($http) {
 
       $http.get(`https://www.eventbriteapi.com/v3/events/search/?location.address=${city}&location.within=50mi&sort_by=best&token=VS4PG47YHJGSWEJUEE3Y`)
       .then(response => {
-        console.log('yo:',response)
+
         return response.data;
       })
 

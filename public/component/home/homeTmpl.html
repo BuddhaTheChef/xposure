@@ -32,7 +32,8 @@
   </div>
       <div class ="eventDetailContain">
         <h4 class="spotName"><span class="infoText">NAME:</span> {{event.name.text}}</h4>
-        <p class= "infoEvent"><span class="infoText">LOCATION:</span> {{event.start.timezone}} <span class="infoText">TIME:</span> {{event.start.local | date: 'medium'}} <span class="infoText">TO</span> {{event.end.local  | date: 'medium'}}</p>
+        <p class= "infoEvent"><span class="infoText">LOCATION: </span>Dallas, Texas</p>
+        <p><span class="infoText">TIME:</span> {{event.start.local | date: 'medium'}} <span class="infoText">TO</span> {{event.end.local  | date: 'medium'}}</p>
         <hr />
         <p class="spotNum"><span class="infoText">DESCRIPTION:</span> {{event.description.text}}</p>
       </div>

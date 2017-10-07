@@ -5,9 +5,18 @@ angular.module('xposure').controller('homeCtrl', function($scope, user, mainSrvc
     // else user = user object from database
     $scope.user = user.data && user.data.err ? user.data.err : user;
 
+
+    // console.log(response.events)
+    //
+    // $scope.events = response.events;
+    //
+    // $scope.location = response.location;
+
+
   mainSrvc.getEvents().then(function(response){
     console.log(response);
     $scope.events = response;
+
   })
 
 $scope.updateUser = (user) => {
