@@ -132,3 +132,44 @@ margin-right: auto;
 
 
 /*///////////////////////////////create Event page//////////////////////////*/
+#createEventPlaceholder{
+  display: flex;
+  flex-direction: column;
+
+
+}
+.eventTitle{
+margin-top: 30px;
+margin-bottom: 30px;
+margin-left: 10vh;
+}
+.eventLocation{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10vh;
+}
+.eventEmail{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10vh;
+}
+.eventStarts{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10vh;
+}
+.eventEnds{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10vh;
+}
+.eventImage{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10vh;
+}
+.eventDescription{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10vh;
+}
