@@ -1,8 +1,9 @@
 <h1>Searched Events</h1>
 <div class="eventList" ng-repeat="event in events track by $index">
 
-  <div class="divSpotImg">
-    <img class="spotImg" ng-src="{{event.logo.original.url}}" />
+<div class="divForOneEvent">
+  <div class="divSpotImg" style="background-image: url('{{event.logo.original.url}}')">
+  
   </div>
       <div class ="eventDetailContain">
         <h4 class="spotName"><span class="infoText">NAME:</span> {{event.name.text}}</h4>
@@ -14,6 +15,8 @@
         <hr />
         <p class="spotNum"><span class="infoText">DESCRIPTION:</span> {{event.description.text}}</p>
       </div>
+
+</div>
 
 
 

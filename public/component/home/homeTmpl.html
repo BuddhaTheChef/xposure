@@ -1,6 +1,3 @@
-
-
-
 <!-- <form id = "inputUser">
     <input type="text" class="" ng-model="person.first" placeholder="first name" />
     <input type="text" class="" ng-model="person.last" placeholder="last name" />
@@ -25,18 +22,22 @@
 
 
 
-<div class="eventList" ng-repeat="event in events track by $index">
+<div class="eventList" ng-click="" ng-repeat="event in events track by $index">
 
-  <div class="divSpotImg">
-    <img class="spotImg" ng-src="{{event.logo.original.url}}" />
+  <div class="divForOneEvent">
+    <div class="divSpotImg" style="background-image: url('{{event.logo.original.url}}')">
+
+
+    </div>
+    <div class="eventDetailContain">
+      <h4 class="spotName"><span class="infoText">NAME:</span> {{event.name.text}}</h4>
+      <p class="infoEvent"><span class="infoText">LOCATION: </span>Dallas, Texas</p>
+      <p><span class="infoText">TIME:</span> {{event.start.local | date: 'medium'}} <span class="infoText">TO</span> {{event.end.local | date: 'medium'}}</p>
+      <hr />
+      <p class="spotNum"><span class="infoText">DESCRIPTION:</span> {{event.description.text}}</p>
+    </div>
   </div>
-      <div class ="eventDetailContain">
-        <h4 class="spotName"><span class="infoText">NAME:</span> {{event.name.text}}</h4>
-        <p class= "infoEvent"><span class="infoText">LOCATION: </span>Dallas, Texas</p>
-        <p><span class="infoText">TIME:</span> {{event.start.local | date: 'medium'}} <span class="infoText">TO</span> {{event.end.local  | date: 'medium'}}</p>
-        <hr />
-        <p class="spotNum"><span class="infoText">DESCRIPTION:</span> {{event.description.text}}</p>
-      </div>
+
 
 
 
