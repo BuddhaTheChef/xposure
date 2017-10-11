@@ -1,28 +1,11 @@
-<!-- <form id = "inputUser">
-    <input type="text" class="" ng-model="person.first" placeholder="first name" />
-    <input type="text" class="" ng-model="person.last" placeholder="last name" />
-    <input type="text" class="" ng-model="person.email" placeholder="email" />
-    <button  ng-click="updateUser(person)" class="search-button btn btn-primary" ui-sref="profile"> Submit </button>
-</form> -->
+
 
 <h1 class="home-header">HOME</h1>
 
 <h3 class="home-city-display">Upcoming Events in Dallas...</h3>
-<!-- check if user has an auth id (meaning its the user and not the error message) -->
-<!-- if no authid, display error, else display user info -->
-<!-- <h1 ng-if="!user.authid">{{user}}</h1>
-<div ng-if="user.authid">
-    <h1>{{user.authid}}</h1>
-    <h1>{{user.username}}</h1>
-</div> -->
-<!-- Go to Login View -->
-<!-- <a class="transition" ui-sref="login" ng-if="!user.authid"><span>login</span></a> -->
-<!-- Logout your user, if not user, button won't display -->
-<!-- <a class="transition" href="/auth/logout" ng-if="user.authid"><span>logout!</span></a> -->
 
 
-
-<div class="eventList" ng-click="" ng-repeat="event in events track by $index">
+<div class="eventList"  ng-repeat="event in events track by $index">
 
   <div class="divForOneEvent">
     <div class="divSpotImg" style="background-image: url('{{event.logo.original.url}}')">
@@ -30,7 +13,7 @@
 
     </div>
     <div class="eventDetailContain">
-      <h4 class="spotName"><span class="infoText">NAME:</span> {{event.name.text}}</h4>
+      <h4 class="spotName"><span class="infoText">NAME:</span> {{event.name.text}}<span><button class="saveButtonEvent" ng-click="addEventList(event)">Save Event</button></span></h4>
       <p class="infoEvent"><span class="infoText">LOCATION: </span>Dallas, Texas</p>
       <p><span class="infoText">TIME:</span> {{event.start.local | date: 'medium'}} <span class="infoText">TO</span> {{event.end.local | date: 'medium'}}</p>
       <hr />

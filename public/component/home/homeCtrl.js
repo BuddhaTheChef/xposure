@@ -29,6 +29,11 @@ $scope.updateUser = (user) => {
     $scope.updatedUser = response;
   });
 }
+
+$scope.addEventList = function(event){
+      mainSrvc.eventList.unshift(event)
+      console.log(mainSrvc.eventList)
+    }
 ///////////////////////////test///////////////////////////////////////////
 
   // const getUserByName =  (req,res,next)=>{

@@ -2,12 +2,17 @@
 
 
 <form id = "createEventPlace">
-    <input type="text" class="eventTitle" placeholder="Event Title" />
-    <input type="text" class="eventLocation" placeholder="Location" />
-    <input type="text" class="eventEmail" placeholder="email" />
-    <input type="text" class="eventStarts" placeholder="Starts" />
-    <input type="text" class="eventEnds" placeholder="Ends" />
-    <input type="text" class="eventImage" placeholder="Event Image" />
-    <input type="text" class="eventDescription" placeholder="Event Description" />
-    <button   class="eventSubmit" ui-sref="event"> Submit </button>
+    <input type="text" class="eventTitle" ng-model="title" placeholder="Event Title" />
+    <input type="text" class="eventLocation" ng-model="location" placeholder="Location" />
+    <input type="text" class="eventEmail" ng-model="eventemail" placeholder="email" />
+    <input type="text" class="eventStarts" ng-model="starts" placeholder="Starts" />
+    <input type="text" class="eventEnds" ng-model="ends" placeholder="Ends" />
+    <input type="text" class="eventImage" ng-model="eventimage" placeholder="Event Image" />
+    <input type="text" class="eventDescription" ng-model="eventdescription" placeholder="Event Description" />
+    <button class="eventSubmit" ng-click="eventSubmit(title,location,eventemail,starts,ends,eventimage,eventdescription)"> Submit </button>
 </form>
+
+{{title}}
+{{location}}
+{{eventemail}}
+{{starts}}

@@ -124,6 +124,32 @@ app.put('/api/users', (req,res,next) => {
 })
 
 
+app.post('/api/usersImage', (req,res,next) => {
+  const db = req.app.get('db');
+  console.log(req.body)
+  db.profilePicSubmit([req.body.userId, req.body.downloadURL])
+  .then(result => {
+     console.log(result)
+    return res.json(result)
+  });
+})
+
+// app.get('/api/userInfo', (req,res) => {
+//   const db = req.app.get('db');
+//   db.getProfileInfo(req.body)
+// })
+
+app.post('/api/event/create', (req,res,next) => {
+  const db = req.app.get('db');
+  console.log(req.body, "YOOOOO")
+  db.createEvent([req.body.title,req.body.location,req.body.eventemail,req.body.starts,req.body.ends,req.body.eventimage,req.body.eventdescription,req.body.authid])
+  .then(result => {
+    console.log(result, "THE AFTER YOOOO")
+    return res.json(result)
+  });
+
+})
+
 
  ////////////////////////////////////////////////////////////////////////////
 

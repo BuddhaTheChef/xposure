@@ -4,6 +4,7 @@ body{
 }
 nav ul {
     width: 100%;
+
     display: flex;
 
   justify-content: space-around;
@@ -18,7 +19,11 @@ nav ul {
   }
 
 header {
+  width: 100%;
   border: grey 1px solid;
+  position: fixed;
+  background-color: teal;
+  top: 0;
 }
 
 input {
@@ -86,6 +91,10 @@ margin-bottom: 0px;
   display: inline ;
 }
 
+.saveButtonEvent{
+float: right;
+}
+
 #inputUser input{
   margin-top: 20px;
 
@@ -137,13 +146,19 @@ margin-bottom: 0px;
 
 
 }
+.profilePictureContain{
+  display: flex;
+}
 
 .profilePicture{
-display: flex;
-text-align: center;
+
 margin-top: 60px;
+margin-bottom: 10px;
 margin-left: auto;
 margin-right: auto;
+border-radius: 50%;
+height: 250px;
+
 }
 
 .buttonContain{

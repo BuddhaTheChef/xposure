@@ -43,6 +43,12 @@ angular.module('xposure').config(($urlRouterProvider, $stateProvider) => {
         .state('event', {
             url: '/event',
             templateUrl: './component/event/eventTmpl.html',
-            controller: 'eventCtrl'
+            controller: 'eventCtrl',
+            resolve: {
+                user: mainSrvc => mainSrvc.getUser()
+                    .then(response => response.data)
+                    .catch(err => err)
+            }
+
         })
 });

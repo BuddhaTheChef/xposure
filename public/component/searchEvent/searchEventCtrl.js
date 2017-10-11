@@ -6,7 +6,10 @@ angular.module('xposure').controller('searchEventCtrl', function (mainSrvc, resp
   $scope.location = response.location;
 
 
-
+  $scope.addEventList = function(event){
+        mainSrvc.eventList.unshift(event)
+        console.log(mainSrvc.eventList)
+      }
   // $scope.events = ['test'];
   // $scope.searchEvents = function(city){
   //   mainSrvc.searchEvents($scope.city).then(function(response){

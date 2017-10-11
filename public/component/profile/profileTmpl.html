@@ -1,20 +1,22 @@
 <div class=profileContentTop>
   <h1 class="progilePageHeader">Profile PAGE</h1>
 
-  <form id = "inputUser">
-      <input type="text" class="" ng-model="person.first" placeholder="first name" />
-      <input type="text" class="" ng-model="person.last" placeholder="last name" />
-      <input type="text" class="" ng-model="person.email" placeholder="email" />
-      <button  ng-click="updateUser(person)" class="search-button btn btn-primary" ui-sref="home"> Submit </button>
+  <form id = "inputUser" ng-hide="user.first_name && user.last_name && user.email">
+      <input type="text" class="" ng-model="first" placeholder="first name" />
+      <input type="text" class="" ng-model="last" placeholder="last name" />
+      <input type="text" class="" ng-model="email" placeholder="email" />
+      <button  ng-click="updateUser(first,last,email)" class="search-button btn btn-primary"> Submit </button>
   </form>
 
   <!-- //////////////////////////firebase//////////////////////// -->
   <form name="formPlaceHolder">
-                  <!-- PUT THUMBNAIL HERE IF NO IMAGE EXISTS -->
-      <img class="profilePicture" style="border-radius: 50%; height: 250px; width: 250px;" ngf-thumbnail="image || '../assets/img/placeholder.png'">
+      <div class="profilePictureContain">
+        <img class="profilePicture" ng-src="{{user.profilepic}}">
+      </div>
+
       <div class="buttonContain">
         <button name="image" ngf-select ng-model="image">Upload image</button>
-        <!-- <button ng-click="submit(image)">Submit</button> -->
+        <button ng-click="profilePicSubmit(first,last,email,image)">Submit</button>
       </div>
 
   </form>
@@ -23,12 +25,36 @@
 
 <div>
   <h1 class="profileFirstandLast">{{user.first_name}} {{user.last_name}}</h1>
+  {{informationOnPage}}
 </div>
 <div>
   <h3  class="profileEmail">{{user.email}}</h3>
 </div>
+
 <div class="eventContain">
-  <h5 >Saved Events</h5>  <h5>Created Events</h5>
+  <h5>Saved Events</h5>  <h5>Created Events</h5>
+</div>
+
+</div>
+
+<div class="eventList" ng-repeat="event in eventList">
+  <div class="divForOneEvent">
+    <div class="divSpotImg" style="background-image: url('{{event.logo.original.url}}')">
+
+
+    </div>
+    <div class="eventDetailContain">
+      <h4 class="spotName"><span class="infoText">NAME:</span> {{event.name.text}}</h4>
+      <p class="infoEvent"><span class="infoText">LOCATION: </span>Dallas, Texas</p>
+      <p><span class="infoText">TIME:</span> {{event.start.local | date: 'medium'}} <span class="infoText">TO</span> {{event.end.local | date: 'medium'}}</p>
+      <hr />
+      <p class="spotNum"><span class="infoText">DESCRIPTION:</span> {{event.description.text}}</p>
+    </div>
+  </div>
+
+
+
+
 </div>
 
 </div>
