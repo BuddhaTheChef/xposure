@@ -1,3 +1,3 @@
-angular.module('xposure').controller('mainCtrl', function (mainSrvc, $scope) {
+angular.module('xposure').controller('mainCtrl', function(mainSrvc, $scope) {
 
 })

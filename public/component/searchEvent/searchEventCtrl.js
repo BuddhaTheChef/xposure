@@ -1,6 +1,6 @@
 angular.module('xposure').controller('searchEventCtrl', function (mainSrvc, response, $scope) {
 
-
+console.log(response, "THIS SUCCKKKS")
   $scope.events = response.events;
 
   $scope.location = response.location;
