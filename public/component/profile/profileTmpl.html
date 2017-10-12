@@ -15,8 +15,8 @@
     </div>
 
     <div class="buttonContain">
-      <button name="image" ngf-select ng-model="image">Upload image</button>
-      <button ng-click="profilePicSubmit(first,last,email,image)">Submit</button>
+      <button class="buttonAppearance" name="image" ngf-select ng-model="image">Upload image</button>
+      <button class="buttonAppearance" ng-click="profilePicSubmit(first,last,email,image)">Submit</button>
     </div>
 
   </form>
@@ -57,14 +57,16 @@
 </div>
 
 
-<div ng-show="clickedEvents == 'created'">
-  <div class="myEventList" ng-repeat="event in myEvents">
-   <div class="divForMyEvent">
+<div class="backgroundForCreated" ng-show="clickedEvents == 'created'">
+  <h1 class="createdEventsTitle">Events Created</h1>
+  <div class="events-alignment">
+  <div class="divForMyEvent" ng-repeat="event in myEvents">
+    <div class="content-align-div">
      <div>
        TITLE: {{event.title}}
      </div>
      <div class="myEventImage" style="background-image: url('{{event.eventimage}}')">
-       
+
      </div>
      <div>
        LOCATION: {{event.location}}
@@ -75,9 +77,10 @@
      <div>
       EMAIL: {{event.eventemail}}
      </div>
-     <div>
+     <div class="event-description">
       DESCRIPTION: {{event.eventdescription}}
      </div>
+   </div>
    </div>
   </div>
 </div>
