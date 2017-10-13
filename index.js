@@ -160,6 +160,14 @@ app.post('/api/event/create', (req, res, next) => {
 
 })
 
+app.delete('/api/event/create/:id', (req,res,next) =>  {
+  const db = req.app.get('db');
+  db.deleteEvent([req.params.id]).then(result => {
+
+    return res.json(result)
+  });
+})
+
 
 ////////////////////////////////////////////////////////////////////////////
 

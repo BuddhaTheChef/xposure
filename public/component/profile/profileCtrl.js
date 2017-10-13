@@ -33,8 +33,18 @@ angular.module('xposure').controller('profileCtrl', function(mainSrvc, $scope, u
     $scope.myEvents = result;
   })
 
+  $scope.deleteEvent = (event) => {
+    mainSrvc.deleteEvent(event).then(result =>{
+      console.log(result, "DELLEEETTEED");
+      mainSrvc.showEvent(user.authid).then(result => {
+        console.log(result);
+        $scope.myEvents = result;
+      })
+    })
+  }
 
-$scope.clickedEvents = 'saved';
+
+$scope.clickedEvents = 'created';
 
 
   $scope.eventList = mainSrvc.eventList;

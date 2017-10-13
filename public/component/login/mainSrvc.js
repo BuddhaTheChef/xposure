@@ -52,6 +52,14 @@ angular.module('xposure').service('mainSrvc', function($http) {
     return $http.post('/api/event/create', newEvent);
   }
 
+  this.deleteEvent = (id) => {
+    console.log(id)
+    return $http.delete('/api/event/create/' +id).then(function(response) {
+      console.log(response)
+      return response;
+    });
+  }
+
 
 
   ////////////////////////////////firebase////////////////////////////////

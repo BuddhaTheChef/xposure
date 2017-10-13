@@ -22,7 +22,7 @@ header {
   width: 100%;
   box-shadow:0 0 20px rgba(0,0,0,0.7);
   position: fixed;
-  background-color: teal;
+  background-color: #64485c;
   top: 0;
 }
 
@@ -41,6 +41,10 @@ input {
   margin-bottom: 0px;
 }
 
+.background-home{
+  background-color: #adadad;
+}
+
 .home-city-display{
   margin-left: 22%;
 }
@@ -55,9 +59,12 @@ background-position: center;
 background-size: cover;
 }
 .divForOneEvent{
-  min-width: 507px;
+  min-width: 80vw;
+  background-color: white;
   display: flex;
-  justify-content:space-around;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+
+
 }
 
 .spotNum{
@@ -89,6 +96,7 @@ margin-bottom: 0px;
   margin-left: 15px;
   margin-right: 15px;
   display: inline ;
+  min-width: auto;
 }
 
 .saveButtonEvent{
@@ -117,16 +125,20 @@ float: right;
 }
 
 .eventList {
-  min-width: 520px;
-  max-width: 950px;
-  margin: 4vh 10% 5vh;
-  box-shadow:0 0 20px rgba(0,0,0,0.3);
+  /*min-width: 520px;
+  max-width: 950px;*/
+  margin: 4vh 20% 3vh;
+  /*box-shadow:0 0 20px rgba(0,0,0,0.3);*/
   }
 
   /*///////////////////////////////profile page//////////////////////////*/
+.profile-background-contain{
+  background-color: teal;
+}
 
 .profileContentTop{
   box-shadow:0 0 20px rgba(0,0,0,0.5);
+  background-color: #adadad;
 }
 
 .progilePageHeader{
@@ -166,7 +178,7 @@ float: right;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-border: 5px solid teal;
+border: 5px solid #83677b;
 ;
 
 }
@@ -187,6 +199,8 @@ align-items: center;
   margin: 0;
   padding: 0;
   width: 100%;
+  background-color: #501b1d;
+
 }
 
 .events-alignment{
@@ -204,7 +218,7 @@ margin: 20px 40px 50px;
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 5%;
-  box-shadow:0 0 20px rgba(0,0,0,0.2);
+  box-shadow:0 0 20px rgba(0,0,0,0.4);
   background-color: white;
   height: 400px;
   width: 450px;
@@ -253,44 +267,120 @@ margin: 20px 40px 50px;
 
 
 /*///////////////////////////////create Event page//////////////////////////*/
-#createEventPlaceholder{
+.heroImgForEvent{
+  width: 100%;
+  height: 60vh;
+  box-shadow:0 0 20px rgba(0,0,0,0.7);
   display: flex;
-  flex-direction: column;
-
+  align-items: center;
+  justify-content: center;
+  background-color: #adadad;
 
 }
+
+.background-event-created{
+  background-color: #501b1d;
+
+}
+
+#createEventPlaceholder{
+
+}
+
+.align-created-content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
 .eventTitle{
-margin-top: 30px;
-margin-bottom: 30px;
-margin-left: 10vh;
+font-size: 20px;
+height: 40px;
+box-shadow:0 3px 15px rgba(0,0,0,0.5);
+
+
 }
 .eventLocation{
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 10vh;
+  font-size: 20px;
+  height: 40px;
+box-shadow:0 3px 15px rgba(0,0,0,0.5);
+
 }
 .eventEmail{
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 10vh;
+  font-size: 20px;
+  height: 40px;
+box-shadow:0 3px 15px rgba(0,0,0,0.5);
+
+}
+.eventTimeTitle{
+  margin-bottom: 0;
 }
 .eventStarts{
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 10vh;
+
+  width: 45%;
+  height: 30px;
+  margin-right: 2%;
+  box-shadow:0 3px 15px rgba(0,0,0,0.5);
+  font-size: 20px;
 }
+.event-create-to{
+  display: -webkit-inline-box;
+}
+
 .eventEnds{
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 10vh;
+
+  margin-left: 2%;
+  width: 45%;
+  height: 30px;
+  box-shadow:0 3px 15px rgba(0,0,0,0.5);
+  font-size: 20px;
 }
 .eventImage{
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 10vh;
+  height: 200px;
+  width: 348px;
+  text-align: center;
+  box-shadow:0 3px 15px rgba(0,0,0,0.5);
+
 }
+.image-event-button-contain{
+  display: flex;
+      align-items: flex-end;
+}
+
+.buttonContainCreateEvent{
+    width: auto;
+     display: inline-block;
+
+margin-left: 30px;
+}
+
+.buttonApp{
+
+}
+
 .eventDescription{
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 10vh;
+
+  height: 200px;
+  box-shadow:0 3px 15px rgba(0,0,0,0.5);
+}
+
+.eventSubmit{
+    margin-top: 30px;
+  margin-bottom: 27px;
+      margin-right: 50%;
+      margin-left: 50%;
+      height: 40px;
+      width: 60px;
+      border-radius: 10%;
+      box-shadow:0 3px 15px rgba(0,0,0,0.5);
+}
+
+/*///////////////////////////////searched Event//////////////////////////////*/
+
+
+.searchevent-background{
+  background-color: #adadad;
 }
