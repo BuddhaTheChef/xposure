@@ -229,7 +229,7 @@ margin: 20px 40px 50px;
 .content-align-div{
   margin: 0 auto;
   width: 75%;
-  height: 80%;
+  height: 90%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -252,8 +252,8 @@ margin: 20px 40px 50px;
 }*/
 
 .myEventImage{
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  height: 500px;
 }
 
 .event-description {
