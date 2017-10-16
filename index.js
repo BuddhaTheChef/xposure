@@ -168,8 +168,33 @@ app.delete('/api/event/create/:id', (req,res,next) =>  {
   });
 })
 
+//////////////////////////////////////////////saved event/////////////////////////////////////////////////////////
+app.post('/api/savedevent/create', (req, res, next) => {
+  const db = req.app.get('db');
 
-////////////////////////////////////////////////////////////////////////////
+  db.createSavedEvent([req.body.title,req.body.location,req.body.start,req.body.ends,req.body.image,req.body.description,req.body.authid])
+    .then(result => {
+
+      return res.json(result)
+    });
+
+})
+
+app.get('/api/savedevent/create/:authid', (req, res, next) => {
+  console.log(req.params.authid)
+  req.app.get('db').showSavedEvent(req.params.authid).then(result => res.json(result));
+})
+
+app.delete('/api/savedevent/create/:id', (req,res,next) =>  {
+  const db = req.app.get('db');
+  db.deleteSavedEvent([req.params.id]).then(result => {
+
+    return res.json(result)
+  });
+})
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // app.get('/api/test', (req, res, next) => {
 //     app.get('db').users.find({}).then(response => {

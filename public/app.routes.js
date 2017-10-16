@@ -7,12 +7,17 @@ angular.module('xposure').config(($urlRouterProvider, $stateProvider) => {
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: './component/home/homeTmpl.html',
+      templateUrl: './component/searchEvent/searchEventTmpl.html',
       controller: 'homeCtrl',
       resolve: {
-        user: mainSrvc => mainSrvc.getUser()
+        user: mainSrvc => {
+          return mainSrvc.getUser()
           .then(response => response.data)
           .catch(err => err)
+        },
+        response: function(mainSrvc, $stateParams) {
+          return mainSrvc.searchEvents("dallas");
+      }
       }
     })
     .state('login', {
@@ -25,6 +30,11 @@ angular.module('xposure').config(($urlRouterProvider, $stateProvider) => {
       templateUrl: './component/searchEvent/searchEventTmpl.html',
       controller: 'searchEventCtrl',
       resolve: {
+        user: mainSrvc => {
+          return mainSrvc.getUser()
+          .then(response => response.data)
+          .catch(err => err)
+        },
         response: function(mainSrvc, $stateParams) {
           return mainSrvc.searchEvents($stateParams.city);
         }

@@ -1,4 +1,4 @@
-angular.module('xposure').controller('searchEventCtrl', function (mainSrvc, response, $scope) {
+angular.module('xposure').controller('searchEventCtrl', function (mainSrvc, response, $scope,user) {
 
 console.log(response, "THIS SUCCKKKS")
   $scope.events = response.events;
@@ -18,5 +18,12 @@ console.log(response, "THIS SUCCKKKS")
   //     console.log($scope.events)
   //   });
   // }
+  $scope.savedEventSubmit  = (event) => {
+    const newEventSaved = { title: event.name.text,location:($scope.location.augmented_location.city +", "+ $scope.location.augmented_location.region),start:event.start.local,description:event.description.text,authid: user.authid,image:event.logo.original.url,ends:event.end.local};
+    mainSrvc.savedEventSubmit (newEventSaved);
+    console.log(newEventSaved);
+
+
+  }
 
 })

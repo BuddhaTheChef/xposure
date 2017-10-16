@@ -23,13 +23,9 @@
     <h3>Event Image</h3>
     <div class="image-event-button-contain">
     <input type="text" class="eventImage" ng-model="eventimage" placeholder="Event Image url" />
-    <div class="buttonContainCreateEvent">
-      <button class="buttonApp" name="image" ngf-select ng-model="image">Upload image</button>
-      <button class="buttonApp" ng-click="">Submit</button>
-    </div>
   </div>
   <h3>Event Description</h3>
-    <input type="text" class="eventDescription" ng-model="eventdescription" placeholder="Event Description" />
+    <textarea type="text" class="eventDescription" ng-model="eventdescription" placeholder="Event Description"></textarea>
     <button class="eventSubmit" ui-sref="profile" ng-click="eventSubmit(title,location,eventemail,starts,ends,eventimage,eventdescription)"> Submit </button>
 </form>
 

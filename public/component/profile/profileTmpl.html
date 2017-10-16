@@ -42,26 +42,36 @@
 
 
 <div ng-show="clickedEvents == 'saved'">
-  <div class="list-align">
-<div class="eventList" ng-repeat="event in eventList">
+
+
+  <div class="myFirstCoverflowSaved">
+    <coverflow list="mySavedEvents" delete="deleteSavedEvent(event)"></coverflow>
+  </div>
+  <!-- <div class="list-align"> -->
+<!-- <div class="eventList" ng-repeat="event in mySavedEvents">
   <div class="divForOneEvent">
-    <div class="divSpotImg" style="background-image: url('{{event.logo.original.url}}')">
+    <div class="divSpotImg" style="background-image: url('{{event.image}}')">
     </div>
     <div class="eventDetailContain">
-      <h4 class="spotName"><span class="infoText">NAME:</span> {{event.name.text}}</h4>
-      <!-- <p class="infoEvent"><span class="infoText">LOCATION: </span>{{location.augmented_location.city}}, {{location.augmented_location.region }}</p> -->
-      <p><span class="infoText">TIME:</span> {{event.start.local | date: 'medium'}} <span class="infoText">TO</span> {{event.end.local | date: 'medium'}}</p>
+      <h4 class="spotName"><span class="infoText">NAME:</span> {{event.title}}<span><button class="saveButtonEvent" ng-click="deleteSavedEvent(event.id)">DELETE</button></span></h4>
+      <p class="infoEvent"><span class="infoText">LOCATION: </span>{{event.location}}</p>
+      <p><span class="infoText">TIME:</span> {{event.start | date: 'medium'}} <span class="infoText">TO</span> {{event.ends | date: 'medium'}}</p>
       <hr />
-      <p class="spotNum"><span class="infoText">DESCRIPTION:</span> {{event.description.text}}</p>
+      <p class="spotNum"><span class="infoText">DESCRIPTION:</span> {{event.description}}</p>
     </div>
   </div>
-</div>
-</div>
+</div> -->
+<!-- </div> -->
 </div>
 
 
-<div ng-show="clickedEvents == 'created'">
-  <h1 class="createdEventsTitle">Events Created</h1>
+<div class="coverflow-padding" ng-show="clickedEvents == 'created'">
+
+  <div class="myFirstCoverflowCreated">
+    <coverflow list="myEvents" delete="deleteEvent(event)"></coverflow>
+
+  </div>
+  <!-- <h1 class="createdEventsTitle">Events Created</h1>
   <div class="events-alignment">
   <div class="divForMyEvent" ng-repeat="event in myEvents">
     <div class="content-align-div">
@@ -85,7 +95,11 @@
      </div>
      <button ng-click="deleteEvent(event.id)">DELETE</button>
    </div>
-   </div>
+   </div> -->
   </div>
+
+
+
+
 </div>
 </div>

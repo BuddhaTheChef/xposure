@@ -1,4 +1,4 @@
-angular.module('xposure').controller('homeCtrl', function($scope, user, mainSrvc) {
+angular.module('xposure').controller('homeCtrl', function($scope, user, mainSrvc,response) {
   // user comes from resolve, will either be the user obj or error message we send from server
   console.log(user);
   // if user.data and user.data.err then user = err
@@ -16,11 +16,11 @@ angular.module('xposure').controller('homeCtrl', function($scope, user, mainSrvc
   // $scope.location = response.location;
 
 
-  mainSrvc.getEvents().then(function(response) {
-    console.log(response);
-    $scope.events = response;
-
-  })
+  // mainSrvc.searchEvents("dallas").then(function(response) {
+  //   console.log(response);
+  //   $scope.events = response;
+  //
+  // })
 
   $scope.updateUser = (user) => {
 
@@ -34,6 +34,20 @@ angular.module('xposure').controller('homeCtrl', function($scope, user, mainSrvc
     mainSrvc.eventList.unshift(event)
     console.log(mainSrvc.eventList)
   }
+
+  $scope.events = response.events;
+
+  $scope.location = response.location;
+
+///////////////////////////////////////////////////////////////////////////
+
+$scope.savedEventSubmit  = (event) => {
+  const newEventSaved = { title: event.name.text,location:"Dallas, Texas",start:event.start.local,description:event.description.text,authid: user.authid,image:event.logo.original.url,ends:event.end.local};
+  mainSrvc.savedEventSubmit (newEventSaved);
+  console.log(newEventSaved);
+
+
+}
   ///////////////////////////test///////////////////////////////////////////
 
   // const getUserByName =  (req,res,next)=>{

@@ -41,13 +41,53 @@ angular.module('xposure').controller('profileCtrl', function(mainSrvc, $scope, u
         $scope.myEvents = result;
       })
     })
+    
   }
-
 
 $scope.clickedEvents = 'created';
 
 
   $scope.eventList = mainSrvc.eventList;
+
+
+  mainSrvc.showSavedEvent(user.authid).then(result => {
+    console.log(result);
+    $scope.mySavedEvents = result;
+  })
+
+
+  $scope.deleteSavedEvent = (event) => {
+    mainSrvc.deleteSavedEvent(event).then(result =>{
+      console.log(result, "DELLEEETTEED SAVEEEEDDDD");
+      mainSrvc.showSavedEvent(user.authid).then(result => {
+        console.log(result);
+        $scope.mySavedEvents = result;
+      })
+    })
+  }
+
+$scope.myEvents = [];
+
+$scope.mySavedEvents = [];
+
+
+
+  // $scope.items;
+  // [
+  //     { title: "One", image: "http://placehold.it/560x290/ffccff" },
+  //     { title: "Two", image: "http://placehold.it/560x290/66ffcc" },
+  //     { title: "Three", image: "http://placehold.it/560x290/66ffff" },
+  //     { title: "Four", image: "http://placehold.it/560x290/ffff99" },
+  //     { title: "Five", image: "http://placehold.it/560x290/ffcccc" },
+  //     { title: "Six", image: "http://placehold.it/560x290/ccffcc" },
+  //     { title: "Seven", image: "http://placehold.it/560x290/99ddff" }
+  //   ];
+
+
+
+
+
+
 
 
 

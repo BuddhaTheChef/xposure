@@ -36,7 +36,7 @@ angular.module('xposure').service('mainSrvc', function($http) {
   this.showEvent = (authid) => {
     console.log(authid);
     return $http.get('/api/event/create/' + authid).then(function(response) {
-      console.log(response);
+
       return response.data;
     });
   }
@@ -59,8 +59,28 @@ angular.module('xposure').service('mainSrvc', function($http) {
       return response;
     });
   }
+////////////////////////////savedEvents//////////////////////////////////////////////
 
+this.savedEventSubmit = (newEventSaved) => {
+  console.log(newEventSaved)
+  return $http.post('/api/savedevent/create', newEventSaved);
+}
 
+this.showSavedEvent = (authid) => {
+  console.log(authid);
+  return $http.get('/api/savedevent/create/' + authid).then(function(response) {
+    console.log(response);
+    return response.data;
+  });
+}
+
+this.deleteSavedEvent = (id) => {
+  console.log(id)
+  return $http.delete('/api/savedevent/create/' +id).then(function(response) {
+    console.log(response)
+    return response;
+  });
+}
 
   ////////////////////////////////firebase////////////////////////////////
   this.profilePicSubmit = (first, last, email, file, userInfo) => {
