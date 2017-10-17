@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="xposure">
+<html lang="en" ng-app="xposure" class="ng-scope" style="background-color: rgb(0, 108,133)">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +30,8 @@
 <header>
   <nav ng-controller="indexCtrl" >
     <ul>
+      <div ng-show="!user.authid" class="navBarLogin"><li><a href="/auth">Login</a></li><div class="underlineLogin"></div></div>
+      <div ng-show="user.authid" class="navBarLogout"><li><a href="/auth/logout">Logout</a></li><div class="underlineLogout"></div></div>
       <form class="searchContainer">
         <input ng-model="city" class="searchBarEvent" placeholder="Search Events"/>
         <button type="button" class=" btn btn-info searchButton" ui-sref="searchEvent({city: city})">Submit</button>

@@ -1,29 +1,27 @@
-body{
+body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto';
 }
+
 nav ul {
-    width: 100%;
-
-    display: flex;
-
-  justify-content: flex-end;
-    align-items: center;
-    font-size: 18px;
-    text-transform: uppercase   ;
-    font-weight: 300;
-    color: black;
-    text-decoration-style: none;
-
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: black;
+  text-decoration-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
 header {
   width: 100%;
-  box-shadow:0 0 20px rgba(0,0,0,0.7);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   position: fixed;
   background-color: rgb(62, 58, 55);
   top: 0;
@@ -31,189 +29,211 @@ header {
 
 input {
   height: 30px;
- width: 45vw;
-justify-content: flex-start;
+  width: 45vw;
+  justify-content: space-between;
 }
 
-.navBarRightContain{
+.navBarLogin {
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navBarLogout {
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navBarLogin:hover {
+  background-color: grey;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.navBarLogout:hover {
+  background-color: grey;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.navBarRightContain {
   display: flex;
 }
 
-    .searchContainer {
-    display: flex;
+.searchContainer {
+  display: flex;
   align-items: center;
- margin-left: 1%;
-  margin-right: 7%;
-
 }
 
-.searchButton{
+.searchButton {
   margin-left: 2%;
 }
-/*///////////////////////////////////////////////////////////////////////////*/
-a{
-  color:#F2F2F2  !important;
+
+
+/*///////////////////////////////////////////////////////test for navbar//////////////////////////////////////////////////////////////////////*/
+
+a {
+  color: #F2F2F2 !important;
   font-size: 16px;
   list-style-type: none;
   letter-spacing: 3px;
 }
 
-a:hover{
-  text-decoration:none !important;
+a:hover {
+  text-decoration: none !important;
 }
 
-.underlineBrowse{
-  height: 4px;
-  width: 165px;
-  background-color: rgba(255, 0, 208,0.7);
-  margin-top: 5px;
-}
-
-.underlineProfile{
+.underlineLogout {
   height: 4px;
   width: 80px;
-  background-color: rgba(255, 0, 208,0.7);
+  background-color: rgba(255, 0, 208, 0.7);
   margin-top: 5px;
 }
 
-.underlineCreate{
+.underlineLogin {
   height: 4px;
-  width: 140px;
-  background-color: rgba(255, 0, 208,0.7);
+  width: 60px;
+  background-color: rgba(255, 0, 208, 0.7);
   margin-top: 5px;
-
 }
 
-/*.underlineBrowse:hover{
+.underlineBrowse {
   height: 4px;
   width: 165px;
-  background-color: rgb(255, 0, 208);
-
+  background-color: rgba(255, 0, 208, 0.7);
+  margin-top: 5px;
 }
 
-.underlineProfile:hover{
+.underlineProfile {
   height: 4px;
-  width: 80px;
-  background-color: rgb(255, 0, 208);
+  width: 82px;
+  background-color: rgba(255, 0, 208, 0.7);
+  margin-top: 5px;
 }
 
-.underlineCreate:hover{
+.underlineCreate {
   height: 4px;
-  width: 140px;
-  background-color: rgb(255, 0, 208);
+  width: 143px;
+  background-color: rgba(255, 0, 208, 0.7);
+  margin-top: 5px;
+}
 
-}*/
 
 
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-/*///////////////////////////////////////////////////////////////////////////*/
- .browseEventsDivHome{
-  padding-left: 70px;
-  padding-right: 70px;
+.browseEventsDivHome {
+  padding-left: 60px;
+  padding-right: 60px;
   padding-top: 15px;
   padding-bottom: 15px;
-
-}
-.browseEventsDivHome:hover{
-  background-color:grey;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  margin-left: 1%;
+  align-self: center;
 }
 
-.browseEventsDivProfile{
-  padding-left: 70px;
-  padding-right: 70px;
+.browseEventsDivHome:hover {
+  background-color: grey;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+
+}
+
+.browseEventsDivProfile {
+  padding-left: 60px;
+  padding-right: 60px;
   padding-top: 15px;
   padding-bottom: 15px;
-
-}
-.browseEventsDivProfile:hover{
-  background-color:grey;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  align-self: center;
 }
 
-.browseEventsDivEvent{
-  padding-left: 70px;
-  padding-right: 70px;
+.browseEventsDivProfile:hover {
+  background-color: grey;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.browseEventsDivEvent {
+  padding-left: 60px;
+  padding-right: 60px;
   padding-top: 15px;
   padding-bottom: 15px;
-
-}
-.browseEventsDivEvent:hover{
-  background-color:grey;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  margin-right: -1%;
+  align-self: center;
 }
 
-.createUserTag{
+.browseEventsDivEvent:hover {
+  background-color: grey;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.createUserTag {
   text-align: center;
   margin-bottom: 0px;
 }
 
-.background-home{
+.background-home {}
 
-}
-
-.home-city-display{
+.home-city-display {
   margin-left: 22%;
 }
-.divSpotImg{
+
+.divSpotImg {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 200px;
-
-margin: 10px 10px;
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
+  margin: 10px 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-.divForOneEvent{
+
+.divForOneEvent {
   min-width: 80vw;
   background-color: #F2F2F2;
   display: flex;
-  box-shadow: 0px 0px 25px 4px rgba(0,0,0,0.4);
-  border-radius: 1%;
-
+  box-shadow: 0px 0px 25px 4px rgba(0, 0, 0, 0.4);
 }
 
-.spotNum{
+.spotNum {
   height: 103px;
-    overflow: auto;
-    flex-direction: row;
-    margin-top: 0;
-    margin-bottom: 0;
+  overflow: auto;
+  flex-direction: row;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.spotName{
-   justify-content: center;
-    margin-top: 11px;
-    margin-bottom: 0px;
-}
-.infoEvent{
-margin-top: 10px;
-margin-bottom: 0px;
+.spotName {
+  justify-content: center;
+  margin-top: 11px;
+  margin-bottom: 0px;
 }
 
-.infoText{
+.infoEvent {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.infoText {
   font-weight: bold;
   font-size: 17px;
   margin-bottom: 15px;
 }
 
-.eventDetailContain{
+.eventDetailContain {
   flex-direction: row;
   margin-bottom: 10px;
   margin-left: 15px;
   margin-right: 15px;
-  display: inline ;
+  display: inline;
   min-width: auto;
 }
 
-.saveButtonEvent{
-float: right;
+.saveButtonEvent {
+  float: right;
 }
 
-#inputUser input{
+#inputUser input {
   margin-top: 20px;
-
   width: 300px;
 }
 
@@ -221,85 +241,85 @@ float: right;
   text-align: center;
 }
 
-.home-header{
+.home-header {
   text-align: center;
 }
 
-.list-align{
+.list-align {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color:#006C85;
+  background-color: #006C85;
   padding-top: 30px;
 }
 
-.searchevent-background{
+.searchevent-background {
   background-color: #006C85;
 }
-
 
 .eventList {
   /*min-width: 520px;
   max-width: 950px;*/
   margin: 4vh 20% 3vh;
   /*box-shadow:0 0 20px rgba(0,0,0,0.3);*/
-  }
-
-  /*///////////////////////////////profile page//////////////////////////*/
-.profile-background-contain{
-  background-color:#F2F2F2;
 }
 
-.profileContentTop{
-  box-shadow:0 0 20px rgba(0,0,0,0.9);
+
+/*///////////////////////////////////////////////////////profile top page//////////////////////////////////////////////////////////////////*/
+
+.profile-background-contain {
   background-color: #F2F2F2;
 }
 
-.progilePageHeader{
+.profileContentTop {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  background-color: #F2F2F2;
+}
+
+.progilePageHeader {
   text-align: center;
 }
 
-.profileFirstandLast{
+.profileFirstandLast {
   margin-top: 4vh;
   text-align: center;
 }
 
-.profileEmail{
+.profileEmail {
   text-align: center;
   margin-top: 5vh;
 }
 
-.savedEventsWord{
+.savedEventsWord {
   height: 2px;
   width: 101px;
   border: solid rgb(255, 0, 208) 2px;
   box-shadow: 0px 1px 10px white;
+  transition: 5s;
 }
 
-.createdEventsWord{
+.createdEventsWord {
   height: 2px;
   width: 88px;
   border: solid rgb(255, 0, 208) 2px;
   box-shadow: 0px 1px 10px white;
 }
 
-.eventContain{
+.eventContain {
   display: flex;
   justify-content: space-around;
 }
 
-.formPlaceHolder{
+.formPlaceHolder {}
 
-
-}
-.profilePictureContain{
+.profilePictureContain {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.profilePicture{
+.profilePicture {
   height: 250px;
   width: 250px;
   margin: 10px 10px;
@@ -307,57 +327,57 @@ float: right;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-border: 5px solid #006C85;
-;
-
+  border: 5px solid #006C85;
+  ;
 }
 
-.buttonContain{
+.buttonContain {
   display: flex;
-justify-content:center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
 }
 
-.buttonAppearance{
+.buttonAppearance {
   margin-right: 5px;
-  box-shadow:0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/*////////////////////profile bottom page/////////////////////////*/
-.backgroundForCreated{
+
+/*//////////////////////////////////////////////////profile bottom page////////////////////////////////////////////////////////////////////*/
+
+.backgroundForCreated {
   margin: 0;
   padding: 0;
   width: 100%;
   padding-bottom: 300px;
   background-color: #006C85;
   overflow: hidden;
-
 }
 
-.events-alignment{
+.events-alignment {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.createdEventsTitle{
+.createdEventsTitle {
   margin: 20px 0 0 12vw;
-
 }
-  .divForMyEvent{
-margin: 20px 40px 50px;
+
+.divForMyEvent {
+  margin: 20px 40px 50px;
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 5%;
-  box-shadow:0 0 20px rgba(0,0,0,0.4);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   background-color: white;
   height: 400px;
   width: 450px;
- transition: all .15s ease-in-out;
-
+  transition: all .15s ease-in-out;
 }
 
-.content-align-div{
+.content-align-div {
   margin: 0 auto;
   width: 75%;
   height: 90%;
@@ -367,10 +387,9 @@ margin: 20px 40px 50px;
   align-items: center;
 }
 
-.divForMyEvent:hover{
+.divForMyEvent:hover {
   transform: scale(1.1);
 }
-
 
 
 /*.divForMyEvent{
@@ -382,7 +401,7 @@ margin: 20px 40px 50px;
   width: 500px;
 }*/
 
-.myEventImage{
+.myEventImage {
   width: 400px;
   height: 500px;
 }
@@ -393,53 +412,50 @@ margin: 20px 40px 50px;
 }
 
 .event-description::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-/*///////////////////////////////create Event page//////////////////////////*/
-.heroImgForEvent{
+
+/*//////////////////////////////////////////////////////////create Event page////////////////////////////////////////////////////////////*/
+
+.heroImgForEvent {
   width: 100%;
   height: 60vh;
-  box-shadow:0 0 20px rgba(0,0,0,0.7);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #;
-
 }
 
-.titleForCreatedEventHeader{
+.titleForCreatedEventHeader {
   color: #F2F2F2;
   font-size: 150px;
   text-shadow: 0 0 30px black;
-
 }
 
-.subtitleForCreatedEventHeader{
+.subtitleForCreatedEventHeader {
   color: #F2F2F2;
   font-size: 30px;
   text-shadow: 0 0 10px black;
 }
 
-.align-header-content{
+.align-header-content {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.background-event-created{
+.background-event-created {
   background-color: #262628;
-
 }
 
-#createEventPlaceholder{
+#createEventPlaceholder {}
 
-}
-
-.align-created-content{
+.align-created-content {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -447,172 +463,106 @@ margin: 20px 40px 50px;
   margin-left: 50%;
   margin-right: 50%;
 }
-.eventTitleColors{
+
+.eventTitleColors {
   color: #F2F2F2;
 }
 
-.eventTitle{
-font-size: 20px;
-height: 40px;
-box-shadow:0 3px 15px rgba(0,0,0,0.5);
-}
-.eventLocation{
+.eventTitle {
   font-size: 20px;
   height: 40px;
-box-shadow:0 3px 15px rgba(0,0,0,0.5);
-
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
 }
-.eventEmail{
+
+.eventLocation {
   font-size: 20px;
   height: 40px;
-box-shadow:0 3px 15px rgba(0,0,0,0.5);
-
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
 }
-.eventTimeTitle{
+
+.eventEmail {
+  font-size: 20px;
+  height: 40px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+.eventTimeTitle {
   margin-bottom: 0;
   color: #F2F2F2;
 }
-.eventStarts{
 
+.eventStarts {
   width: 45%;
   height: 30px;
   margin-right: 2%;
-  box-shadow:0 3px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
   font-size: 20px;
 }
-.event-create-to{
+
+.event-create-to {
   display: -webkit-inline-box;
   color: #F2F2F2;
 }
 
-.eventEnds{
-
+.eventEnds {
   margin-left: 2%;
   width: 45%;
   height: 30px;
-  box-shadow:0 3px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
   font-size: 20px;
 }
-.eventImage{
+
+.eventImage {
   height: 200px;
   width: 348px;
   font-size: 30px;
-  box-shadow:0 3px 15px rgba(0,0,0,0.5);
-
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
 }
-.image-event-button-contain{
+
+.image-event-button-contain {
   display: flex;
-      align-items: flex-end;
+  align-items: flex-end;
 }
 
-.buttonContainCreateEvent{
-    width: auto;
-     display: inline-block;
-
-margin-left: 30px;
+.buttonContainCreateEvent {
+  width: auto;
+  display: inline-block;
+  margin-left: 30px;
 }
 
-.buttonApp{
+.buttonApp {}
 
-}
-
-.eventDescription{
-
+.eventDescription {
   height: 200px;
-  box-shadow:0 3px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
   font-size: 18px;
   width: 98%;
-  padding-top:6px;
-  padding-left:1%;
-text-align: left;
-
-
+  padding-top: 6px;
+  padding-left: 1%;
+  text-align: left;
 }
 
-.eventSubmit{
-    margin-top: 30px;
+.eventSubmit {
+  margin-top: 30px;
   margin-bottom: 27px;
-      margin-right: 50%;
-      margin-left: 50%;
-      height: 40px;
-      width: 60px;
-      border-radius: 10%;
-      box-shadow:0 3px 15px rgba(0,0,0,0.5);
-}
-/*//////////////////////////bootstrap button//////////////////////////////////////////////*/
-
-.btn:focus,.btn:active {
-   outline: none !important;
-   color: white;
+  margin-right: 50%;
+  margin-left: 50%;
+  height: 40px;
+  width: 60px;
+  border-radius: 10%;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
 }
 
-.btn3d {
-    transition:all .08s linear;
-    position:relative;
-    outline:medium none;
-    -moz-outline-style:none;
-    border:0px;
-    color: white;
-    margin-top:15px;
-}
-.btn3d:focus {
-    outline:medium none;
-    -moz-outline-style:none;
-    color: white;
-}
-.btn3d:active {
-    top:9px;
-    color: white;
-}
-
-
-.btn3d.btn-secondary {
-	box-shadow: 0 0 0 1px rgb(0, 97, 119) inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 rgb(0, 93, 114), 0 8px 8px 1px rgba(0, 0, 0, 0.5);
-	background-color: #006C85;
-  margin-bottom: 27px;
-  margin-right: 55%;
-  margin-left: 45%;
-  color: white;
-}
-
-
-.btn3d.btn-secondary.active {
-	box-shadow: 0 0 0 1px rgb(0, 97, 119) inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
-	background-color: #006C85;
-  color: white;
-}
-
-
-
-
-
-/*///////////////////////////////searched Event//////////////////////////////*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*//////////////////////////////////////////////////////////////searched Event////////////////////////////////////////////////////////////*/
 
 .coverflow__container {
-
   left: 0;
   right: 0;
   perspective: 900px;
   top: 50%;
   transform: translateY(-50%);
-
 }
+
 .coverflow__element {
   position: absolute;
   left: 50%;
@@ -625,81 +575,71 @@ text-align: left;
   background: #fff;
   box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.75);
   cursor: pointer;
-
 }
+
 .coverflow__image img {
   width: 100%;
   background-size: cover;
-  height : 100%;
+  height: 100%;
 }
+
 .coverflow__title {
   font-family: Helvetica;
   margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding-left: 0.5rem;
-
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
 }
 
-.myFirstCoverflowCreated{
-
+.myFirstCoverflowCreated {
   margin-top: 250px;
-margin-bottom: 30vh;
+  margin-bottom: 30vh;
 }
 
-.myFirstCoverflowSaved{
-
+.myFirstCoverflowSaved {
   margin-top: 250px;
 }
 
-.coverflowimg{
-height: 293px;
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
+.coverflowimg {
+  height: 293px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .coverflowimg::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-
-.locationandtimeboxthingy{
+.locationandtimeboxthingy {
   padding-left: 30px;
   padding-right: 30px;
   opacity: 0;
   transition: 1s ease;
 }
 
-.coverflowimg:hover .locationandtimeboxthingy{
-
+.coverflowimg:hover .locationandtimeboxthingy {
   opacity: 1;
 }
 
+.coverflowContainForHover {}
 
+.coverflowContainForHover:hover {}
 
-.coverflowContainForHover{
-
-}
-
-.coverflowContainForHover:hover{
-
-}
-
-.coverflowButton{
+.coverflowButton {
   float: right;
-    margin-right: 20px;
-    margin-top: -33px;
+  margin-right: 20px;
+  margin-top: -33px;
 }
 
-.locationCoverflow{
-text-align: center;
-color: white;
-padding-top: 20px;
-font-size: 28px;
-text-shadow: 0px 3px 5px black;
+.locationCoverflow {
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+  font-size: 28px;
+  text-shadow: 0px 3px 5px black;
 }
 
-.timedatecoverflow{
+.timedatecoverflow {
   color: white;
   padding-top: 7px;
   font-size: 17px;
@@ -707,7 +647,7 @@ text-shadow: 0px 3px 5px black;
   text-align: center;
 }
 
-.descriptonCoverflow{
+.descriptonCoverflow {
   color: white;
   padding-top: 7px;
   font-size: 16px;
@@ -717,18 +657,57 @@ text-shadow: 0px 3px 5px black;
   height: 141px;
   width: 100%;
   line-height: 25px;
-
 }
 
-.descriptonCoverflow::-webkit-scrollbar{
+.descriptonCoverflow::-webkit-scrollbar {
   display: none;
 }
 
-
-
-
-
-.overlaybackgroundimagethingy:hover{
-  background-color: rgba(60,60,60,0.8);
+.overlaybackgroundimagethingy:hover {
+  background-color: rgba(60, 60, 60, 0.8);
   height: 100%;
+}
+
+
+/*//////////////////////////////////////////////////////bootstrap button//////////////////////////////////////////////////////////////////*/
+
+.btn:focus, .btn:active {
+  outline: none !important;
+  color: white;
+}
+
+.btn3d {
+  transition: all .08s linear;
+  position: relative;
+  outline: medium none;
+  -moz-outline-style: none;
+  border: 0px;
+  color: white;
+  margin-top: 15px;
+}
+
+.btn3d:focus {
+  outline: medium none;
+  -moz-outline-style: none;
+  color: white;
+}
+
+.btn3d:active {
+  top: 9px;
+  color: white;
+}
+
+.btn3d.btn-secondary {
+  box-shadow: 0 0 0 1px rgb(0, 97, 119) inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 rgb(0, 93, 114), 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+  background-color: #006C85;
+  margin-bottom: 27px;
+  margin-right: 55%;
+  margin-left: 45%;
+  color: white;
+}
+
+.btn3d.btn-secondary.active {
+  box-shadow: 0 0 0 1px rgb(0, 97, 119) inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+  background-color: #006C85;
+  color: white;
 }
