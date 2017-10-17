@@ -12,7 +12,8 @@
   <!-- //////////////////////////firebase//////////////////////// -->
   <form name="formPlaceHolder">
     <div class="profilePictureContain">
-      <img class="profilePicture" style="background-image: url('{{user.profilepic}}')">
+      <!-- <img class="profilePicture" style="background-image: url('{{user.profilepic}}')"> -->
+      <div class="profilePicture" ngf-as-background="true" ngf-thumbnail="image || user.profilepic"></div>
     </div>
 
     <div class="buttonContain">
@@ -32,8 +33,10 @@
   </div>
 
   <div class="eventContain">
-    <div ng-click="clickedEvents = 'saved'"><h5>Saved Events</h5></div>
-    <div ng-click="clickedEvents = 'created'"><h5>Created Events</h5></div>
+    <div ng-click="clickedEvents = 'saved'"><h5>Saved Events</h5><div ng-show="clickedEvents == 'saved'" class="createdEventsWord"></div></div>
+
+    <div ng-click="clickedEvents = 'created'"><h5>Created Events</h5><div ng-show="clickedEvents == 'created'" class="savedEventsWord" ></div></div>
+
   </div>
 
 </div>
@@ -47,22 +50,12 @@
   <div class="myFirstCoverflowSaved">
     <coverflow list="mySavedEvents" delete="deleteSavedEvent(event)"></coverflow>
   </div>
-  <!-- <div class="list-align"> -->
-<!-- <div class="eventList" ng-repeat="event in mySavedEvents">
-  <div class="divForOneEvent">
-    <div class="divSpotImg" style="background-image: url('{{event.image}}')">
-    </div>
-    <div class="eventDetailContain">
-      <h4 class="spotName"><span class="infoText">NAME:</span> {{event.title}}<span><button class="saveButtonEvent" ng-click="deleteSavedEvent(event.id)">DELETE</button></span></h4>
-      <p class="infoEvent"><span class="infoText">LOCATION: </span>{{event.location}}</p>
-      <p><span class="infoText">TIME:</span> {{event.start | date: 'medium'}} <span class="infoText">TO</span> {{event.ends | date: 'medium'}}</p>
-      <hr />
-      <p class="spotNum"><span class="infoText">DESCRIPTION:</span> {{event.description}}</p>
-    </div>
-  </div>
-</div> -->
-<!-- </div> -->
+
 </div>
+
+
+
+
 
 
 <div class="coverflow-padding" ng-show="clickedEvents == 'created'">
@@ -71,31 +64,7 @@
     <coverflow list="myEvents" delete="deleteEvent(event)"></coverflow>
 
   </div>
-  <!-- <h1 class="createdEventsTitle">Events Created</h1>
-  <div class="events-alignment">
-  <div class="divForMyEvent" ng-repeat="event in myEvents">
-    <div class="content-align-div">
-     <div ng-model="title">
-       TITLE: {{event.title}}
-     </div>
-     <div ng-model="image" class="myEventImage" style="background-image: url('{{event.eventimage}}')">
 
-     </div>
-     <div ng-model="location">
-       LOCATION: {{event.location}}
-     </div>
-     <div ng-model="time">
-       STARTS: {{event.starts | date: 'medium' }} TO {{event.ends | date: 'medium'}}
-     </div>
-     <div ng-model="email">
-      EMAIL: {{event.eventemail}}
-     </div>
-     <div ng-model="description" class="event-description">
-      DESCRIPTION: {{event.eventdescription}}
-     </div>
-     <button ng-click="deleteEvent(event.id)">DELETE</button>
-   </div>
-   </div> -->
   </div>
 
 

@@ -1,8 +1,12 @@
 
 
 <div class="background-event-created">
-<div class="heroImgForEvent">
-   YO
+<div class="heroImgForEvent" style="background-image: url('http://dumelangnews.co.za/sites/default/files/images/articles/21_22.jpg')">
+  <div class="align-header-content">
+    <h1 class="titleForCreatedEventHeader">CREATE YOUR EVENT</h1>
+    <h1 class="subtitleForCreatedEventHeader">BUILD YOUR BRAND | GET RECOGNIZED | PURSUE YOUR DREAMS </h1>
+  </div>
+
 </div>
 
 
@@ -11,22 +15,23 @@
 
 <div class="align-created-content">
 <form id = "createEventPlace">
-  <h3>Event Title</h3>
-    <input type="text" class="eventTitle" ng-model="title" placeholder="Event Title" />
-    <h3>Event Location</h3>
-    <input type="text" class="eventLocation" ng-model="location" placeholder="Location" />
-    <h3>Event Email</h3>
-    <input type="text" class="eventEmail" ng-model="eventemail" placeholder="email" />
+  <h3 class="eventTitleColors">Event Title</h3>
+    <input type="text" class="eventTitle" ng-model="title" placeholder=" Event Title" />
+    <h3 class="eventTitleColors">Event Location</h3>
+    <input type="text" class="eventLocation" ng-model="location" placeholder=" City, State" />
+    <h3 class="eventTitleColors">Event Email</h3>
+    <input type="text" class="eventEmail" ng-model="eventemail" placeholder=" email..." />
     <h3 class="eventTimeTitle">Time</h3>
     <input type="datetime-local" class="eventStarts" ng-model="starts" placeholder="Starts" /> <h3 class="event-create-to">TO</h3>
     <input type="datetime-local" class="eventEnds" ng-model="ends" placeholder="Ends" />
-    <h3>Event Image</h3>
+    <h3 class="eventTitleColors">Event Image</h3>
     <div class="image-event-button-contain">
-    <input type="text" class="eventImage" ng-model="eventimage" placeholder="Event Image url" />
+    <textarea type="text" class="eventImage" ng-model="eventimage" placeholder=" Image url..."></textarea>
   </div>
-  <h3>Event Description</h3>
-    <textarea type="text" class="eventDescription" ng-model="eventdescription" placeholder="Event Description"></textarea>
-    <button class="eventSubmit" ui-sref="profile" ng-click="eventSubmit(title,location,eventemail,starts,ends,eventimage,eventdescription)"> Submit </button>
+  <h3 class="eventTitleColors">Event Description</h3>
+    <textarea type="text" class="eventDescription" ng-model="eventdescription" placeholder=" Enter Text Here..."></textarea>
+    <!-- <button class="eventSubmit" ui-sref="profile" ng-click="eventSubmit(title,location,eventemail,starts,ends,eventimage,eventdescription)"> Submit </button> -->
+    <button type="button" class="btn btn-secondary btn-lg btn3d"  ui-sref="profile" ng-click="eventSubmit(title,location,eventemail,starts,ends,eventimage,eventdescription)"><span class="glyphicon glyphicon-ok"></span> Create</button>
 </form>
 
 </div>

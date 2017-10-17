@@ -11,13 +11,16 @@ angular.module('xposure', ['ui.router','ngFileUpload']).directive('coverflow', f
                 '<div class="coverflow__element" style="{{loadElementStyle($index)}}" ng-click="changeIndex($index)" ng-repeat="item in list">' +
                     '<h2  class="coverflow__title">{{ item.title }}</h2>' +
                     '<div class="coverflow__image">'+
-                    '<button ng-click="delete({event: item.id})">DELETE</button>'+
-
+                    '<button class="coverflowButton" ng-click="delete({event: item.id})">DELETE</button>'+
                       `<div class="coverflowimg" ng-style="{'background-image': 'url(' + (item.eventimage || item.image) + ')'}">` +
                       '<div class="overlaybackgroundimagethingy">' +
                       '<div class="locationandtimeboxthingy">'+
+                       '<div class="coverflowContainForHover">' +
                       '<div class="locationCoverflow">{{item.location}}</div>' +
                       "<div class='timedatecoverflow'>{{ item.starts || item.start | date: 'medium'}} TO {{ item.ends | date: 'medium'}}</div>"+
+                      '<hr/>' +
+                      '<div class="descriptonCoverflow">{{item.eventdescription || item.description }}</div>' +
+                      '</div>' +
                      '</div>'+
                    '</div>'+
                    '</div>' +

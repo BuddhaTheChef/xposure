@@ -41,10 +41,10 @@ angular.module('xposure').controller('profileCtrl', function(mainSrvc, $scope, u
         $scope.myEvents = result;
       })
     })
-    
+
   }
 
-$scope.clickedEvents = 'created';
+$scope.clickedEvents = 'saved';
 
 
   $scope.eventList = mainSrvc.eventList;
