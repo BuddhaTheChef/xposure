@@ -39,7 +39,15 @@
      <div class="navBarRightContain">
        <div class="browseEventsDivHome"><li ui-sref="home"><a>Browse Events</a></li><div class="underlineBrowse"></div></div>
 
-       <div class="browseEventsDivProfile"><li ui-sref="profile"><a>Profile</a></li><div class="underlineProfile"></div></div>
+       <div class=" dropdown browseEventsDivProfile"><li><a>Profile</a>
+
+       </li><div class="underlineProfile"></div>
+
+       <div class="dropdown-content">
+<a ui-sref="profile">Saved Events</a>
+<a ui-sref="profile">Created Events</a>
+</div>
+     </div>
 
        <div class="browseEventsDivEvent"><li ui-sref="event"><a>Create Event</a></li> <div class="underlineCreate"></div></div>
 
@@ -53,6 +61,9 @@
 
 
     <ui-view></ui-view>
+
+    <footer> This app is made for educational purposes only Made By Aj Wietecha II pictures from <a href="https://www.pexels.com/">  Pexels.com </a>   and   <a href="https://www.eventbrite.com/developer/v3/">  EventBrite  </a>  All Rights Reserved &copy</footer>
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
