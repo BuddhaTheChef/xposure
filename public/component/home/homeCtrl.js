@@ -5,8 +5,10 @@ angular.module('xposure').controller('homeCtrl', function($scope, user, mainSrvc
   // else user = user object from database
 
 
+$scope.categories = mainSrvc.categories;
 
   $scope.user = user.data && user.data.err ? user.data.err : user;
+
 
 
   // console.log(response.events)
@@ -48,20 +50,13 @@ $scope.savedEventSubmit  = (event) => {
 
 
 }
-  ///////////////////////////test///////////////////////////////////////////
 
-  // const getUserByName =  (req,res,next)=>{
-  //   const db = req.app.get('db');
-  //   db.getUserByName([req.query.name]).then(answer => {
-  //     res.json(answer);
-  //   });
-  // }
-  //
-  // module.exports = {
-  //   getUserByName
-  // }
 
-  ////////////////////////////////////////////////////////////////////////////
+mainSrvc.showEvent(user.authid).then(result => {
+  console.log("post to events",result);
+  $scope.myEvents = result;
+}).catch(err => console.log(err));
+
 
 
 })

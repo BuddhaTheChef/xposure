@@ -11,7 +11,7 @@ footer {
   padding-bottom: 0.5%;
   text-align: center;
   font-family: serif;
-  
+
 }
 
 nav ul {
@@ -39,7 +39,7 @@ header {
 
 input {
   height: 30px;
-  width: 45vw;
+  width: 38vw;
   justify-content: space-between;
 }
 
@@ -128,7 +128,7 @@ a:hover {
   background-color: rgba(255, 0, 208, 0.7);
   margin-top: 5px;
 }
-/*////////////////////////////////////////////////////More test////////////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
 
@@ -233,21 +233,63 @@ a:hover {
   margin-left: 22%;
 }
 
+.filterBoxHeader{
+  font-size: 19px;
+background-color: whitesmoke;
+margin-top: 1px;
+padding: 10px;
+width: -webkit-fill-available;
+}
+
+.filterBox{
+
+    margin-left: 3vw;
+    margin-top: 5vh;
+    width: 210px;
+    position: fixed;
+}
+
 .divSpotImg {
   flex-grow: 0;
   flex-shrink: 0;
-  flex-basis: 200px;
+  flex-basis: 300px;
   margin: 10px 10px;
+  max-width: 381px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .divForOneEvent {
-  min-width: 80vw;
+  width: 100%;
+
   background-color: #F2F2F2;
   display: flex;
-  box-shadow: 0px 0px 25px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.6);
+  flex-direction: row;
+}
+
+.expandBox{
+  background-color: whitesmoke;
+  padding: 1% 4% 2%;
+  box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.6);
+}
+
+.expandBoxDescription{
+  background-color: rgba(192, 192, 192,0.3);
+    padding: 2% 3%;
+    border-radius: 1%;
+}
+
+.expandbutton{
+border-radius: 0 !important;
+width: 100%;
+box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.registerBtn{
+  margin-left: 90%;
+  margin-top: 2.5%;
 }
 
 .spotNum {
@@ -265,27 +307,48 @@ a:hover {
 }
 
 .infoEvent {
-  margin-top: 10px;
+  margin-top: 5px;
+  font-size: 20px;
   margin-bottom: 0px;
 }
 
 .infoText {
   font-weight: bold;
-  font-size: 17px;
+  font-size: 22px;
   margin-bottom: 15px;
+}
+
+.infoFromTo{
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.infoTime{
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.categoryTags{
+  color: white;
+  padding: 6px 10px;
+  border-radius: 25px;
+  background-color: rgb(142, 142, 142);
+  width: fit-content;
 }
 
 .eventDetailContain {
   flex-direction: row;
+  flex-grow: 2;
   margin-bottom: 10px;
   margin-left: 15px;
   margin-right: 15px;
   display: inline;
-  min-width: auto;
+  height: 170px;
 }
 
 .saveButtonEvent {
   float: right;
+  font-size: 15px
 }
 
 #inputUser input {
@@ -308,19 +371,26 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #006C85;
+  /*background-color: #006C85;*/
+  background: linear-gradient(rgba(0,108,133.25), rgba(0,108,133.50));
   padding-top: 30px;
 }
 
+.glyphicon{
+  position: inherit!important;
+}
+
 .searchevent-background {
-  background-color: #006C85;
+  /*background-color: #006C85;*/
+  background: linear-gradient(rgba(0,108,133,1), rgba(62, 58, 55,1));
 }
 
 .eventList {
-  /*min-width: 520px;
-  max-width: 950px;*/
-  margin: 4vh 20% 3vh;
-  /*box-shadow:0 0 20px rgba(0,0,0,0.3);*/
+  width: 63%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 1%;
+  margin-top: 1%;
 }
 
 
@@ -349,9 +419,13 @@ a:hover {
   margin-top: 5vh;
 }
 
+.eventTypeHeight{
+  font-size: 19px;
+}
+
 .savedEventsWord {
   height: 2px;
-  width: 101px;
+  width: 140px;
   border: solid rgb(255, 0, 208) 2px;
   box-shadow: 0px 1px 10px white;
   transition: 5s;
@@ -359,7 +433,7 @@ a:hover {
 
 .createdEventsWord {
   height: 2px;
-  width: 88px;
+  width: 120px;
   border: solid rgb(255, 0, 208) 2px;
   box-shadow: 0px 1px 10px white;
 }
@@ -576,6 +650,17 @@ a:hover {
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
 }
 
+/*.eventTags{
+  font-size: 20px;
+  height: 40px;
+  width: 37.2vw;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+}*/
+
+.tagInputContain{
+  color: whitesmoke;
+}
+
 .image-event-button-contain {
   display: flex;
   align-items: flex-end;
@@ -645,6 +730,7 @@ a:hover {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding-left: 0.5rem;
+  padding-right: 4px;
 }
 
 .myFirstCoverflowCreated {
@@ -685,7 +771,8 @@ a:hover {
 .coverflowButton {
   float: right;
   margin-right: 20px;
-  margin-top: -33px;
+  margin-top: -38px;
+  z-index: 9;
 }
 
 .locationCoverflow {

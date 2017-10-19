@@ -152,7 +152,7 @@ app.get('/api/event/create/:authid', (req, res, next) => {
 app.post('/api/event/create', (req, res, next) => {
   const db = req.app.get('db');
 
-  db.createEvent([req.body.title, req.body.location, req.body.eventemail, req.body.starts, req.body.ends, req.body.eventimage, req.body.eventdescription, req.body.authid])
+  db.createEvent([req.body.title, req.body.location, req.body.eventemail, req.body.starts, req.body.ends, req.body.eventimage, req.body.eventdescription, req.body.authid, req.body.tags])
     .then(result => {
 
       return res.json(result)

@@ -33,9 +33,9 @@
   </div>
 
   <div class="eventContain">
-    <div ng-click="clickedEvents = 'saved'"><h5>Saved Events</h5><div ng-show="clickedEvents == 'saved'" class="createdEventsWord"></div></div>
+    <div ng-click="clickedEvents = 'saved'"><h5 class="eventTypeHeight">Saved Events</h5><div ng-show="clickedEvents == 'saved'" class="createdEventsWord"></div></div>
 
-    <div ng-click="clickedEvents = 'created'"><h5>Created Events</h5><div ng-show="clickedEvents == 'created'" class="savedEventsWord" ></div></div>
+    <div ng-click="clickedEvents = 'created'"><h5 class="eventTypeHeight">Created Events</h5><div ng-show="clickedEvents == 'created'" class="savedEventsWord" ></div></div>
 
   </div>
 
@@ -61,7 +61,7 @@
 <div class="coverflow-padding" ng-show="clickedEvents == 'created'">
 
   <div class="myFirstCoverflowCreated">
-    <coverflow list="myEvents" delete="deleteEvent(event)"></coverflow>
+    <coverflow list="myEvents"  delete="deleteEvent(event)"></coverflow>
 
   </div>
 

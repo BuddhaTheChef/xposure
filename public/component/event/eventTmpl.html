@@ -28,10 +28,38 @@
     <div class="image-event-button-contain">
     <textarea type="text" class="eventImage" ng-model="eventimage" placeholder=" Image url..."></textarea>
   </div>
+  <h3 class="eventTitleColors">Tags</h3>
+
+<select ng-model="tags">
+   <option value="103"> Music</option>
+   <option value="101"> Business & Professional</option>
+   <option value="110"> Food & Drink</option>
+   <option value="113"> Community & Culture</option>
+   <option value="105"> Performing & Visual Arts</option>
+   <option value="104"> Film, Media & Entertainment</option>
+   <option value="108"> Sports & Fitness</option>
+   <option value="107"> Health & Wellness</option>
+   <option value="102"> Science & Technology</option>
+   <option value="109"> Travel & Outdoor</option>
+   <option value="111"> Charity & Cause</option>
+   <option value="114"> Religion & Spirituality</option>
+   <option value="115"> Family & Education</option>
+   <option value="116"> Seasonal & Holiday</option>
+   <option value="112"> Government & Politics</option>
+   <option value="106"> Fashion & Beauty</option>
+   <option value="117"> Home & Lifestyle</option>
+   <option value="118"> Auto, Boat & Air</option>
+   <option value="119"> Hobbies & Special Interest</option>
+   <option value="199"> Other</option>
+   <option value="120"> School Activities</option>
+</select>
+
+
+
   <h3 class="eventTitleColors">Event Description</h3>
     <textarea type="text" class="eventDescription" ng-model="eventdescription" placeholder=" Enter Text Here..."></textarea>
     <!-- <button class="eventSubmit" ui-sref="profile" ng-click="eventSubmit(title,location,eventemail,starts,ends,eventimage,eventdescription)"> Submit </button> -->
-    <button type="button" class="btn btn-secondary btn-lg btn3d"  ui-sref="profile" ng-click="eventSubmit(title,location,eventemail,starts,ends,eventimage,eventdescription)"><span class="glyphicon glyphicon-ok"></span> Create</button>
+    <button type="button" class="btn btn-secondary btn-lg btn3d"  ui-sref="profile" ng-click="eventSubmit(title,location,eventemail,starts,ends,eventimage,eventdescription,tags)"><span class="glyphicon glyphicon-ok"></span> Create</button>
 </form>
 
 </div>

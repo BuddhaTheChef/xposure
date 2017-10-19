@@ -6,6 +6,7 @@
 
 <h3 class="home-city-display">Upcoming Events in Dallas...</h3>
 
+
 <div class="list-align">
 <div class="eventList" ng-repeat="event in events track by $index">
 
@@ -14,11 +15,16 @@
     <div class="eventDetailContain">
       <h4 class="spotName"><span class="infoText">NAME:</span> {{event.name.text}}<span><button type="button" class="saveButtonEvent" ng-click="savedEventSubmit(event)">Save Event</button></span></h4>
       <p class="infoEvent"><span class="infoText">LOCATION: </span>Dallas, Texas</p>
-      <p><span class="infoText">TIME:</span> {{event.start.local | date: 'medium'}} <span class="infoText">TO</span> {{event.end.local | date: 'medium'}}</p>
+
+      <p><span class="infoText">TIME:</span> {{event.start.local | date: 'short'}} <span class="infoText">TO</span> {{event.end.local | date: 'medium'}}</p>
       <p class="spotNum"><span class="infoText">DESCRIPTION:</span> {{event.description.text}}</p>
     </div>
   </div>
 </div>
 </div>
+
+
+
+
 
 </div>

@@ -1,6 +1,63 @@
 <div class="searchevent-background">
 <h1>Searched Events</h1>
+
+<div class="filterBox">
+  <button type="button" class="filterBoxHeader expandbutton btn btn-dark"  ng-click="">Filter By Category  <span class="caret"></span></button>
+
+
+  <button type="button" class="filterBoxHeader expandbutton btn btn-dark" ng-click="">Filter By Date  <span class="caret"></span></button>
+  <div>
+
+  </div>
+</div>
+
 <div class="list-align">
+
+
+
+
+
+  <div class="eventList" ng-repeat="event in myEvents track by $index">
+
+  <div class="divForOneEvent">
+    <div class="divSpotImg" style="background-image: url('{{event.eventimage}}')">
+
+    </div>
+        <div class ="eventDetailContain">
+          <h4 class="spotName"><span class="infoText">{{event.title}}<button class="saveButtonEvent btn btn-primary" ng-click="savedEventSubmit(event)"><span class="glyphicon glyphicon-plus"></span></button></span></h4>
+
+        <div>
+          <p class= "infoEvent">{{event.location}}</p>
+        </div>
+            <p class="infoTime"><span class="infoFromTo">FROM </span> {{event.starts | date: 'short'}} <span class="infoFromTo">TO</span> {{event.ends  | date: 'short'}}</p>
+
+          <!-- <p class="spotNum"><span class="infoText">More Info</span> </p> -->
+            <div class="categoryTags">#{{categories[event.tags]}}</div>
+        </div>
+  </div>
+  <button type="button" class="expandbutton btn btn-dark" ng-click="expand[category]=!expand[category]"><span class="caret"></span></button>
+  <div class="expandBox" ng-show="expand[category]" >
+    <h4>Description</h4>
+    <div class="expandBoxDescription">
+      {{event.eventdescription}}
+    </div>
+
+  </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="eventList" ng-repeat="event in events track by $index">
 
 <div class="divForOneEvent">
@@ -8,20 +65,49 @@
 
   </div>
       <div class ="eventDetailContain">
-        <h4 class="spotName"><span class="infoText">NAME:</span> {{event.name.text}}<span><button class="saveButtonEvent" ng-click="savedEventSubmit(event)">Save Event</button></span></h4>
+        <h4 class="spotName"><span class="infoText">{{event.name.text}}<button class="saveButtonEvent btn btn-primary" ng-click="savedEventSubmit(event)"><span class="glyphicon glyphicon-plus"></span></button></span></h4>
 
       <div>
-        <p class= "infoEvent"><span class="infoText">LOCATION: </span>{{location.augmented_location.city}}, {{location.augmented_location.region }}</p>
+        <p class= "infoEvent">{{location.augmented_location.city}}, {{location.augmented_location.region }}</p>
       </div>
-          <p class="infoText">TIME:{{event.start.local | date: 'medium'}} <span class="infoText">TO</span> {{event.end.local  | date: 'medium'}}</p>
-    
-        <p class="spotNum"><span class="infoText">DESCRIPTION:</span> {{event.description.text}}</p>
+          <p class="infoTime"><span class="infoFromTo">FROM </span> {{event.start.local | date: 'short'}} <span class="infoFromTo">TO</span> {{event.end.local  | date: 'short'}}</p>
+
+        <!-- <p class="spotNum"><span class="infoText">More Info</span> </p> -->
+          <div class="categoryTags">#{{categories[event.category_id]}}</div>
       </div>
 
-</div>
+
 
 </div>
 
+<button type="button" class="expandbutton btn btn-dark" ng-click="expand[category]=!expand[category]"><span class="caret"></span></button>
+
+<div class="expandBox" ng-show="expand[category]" >
+  <h4>Description</h4>
+
+  <div class="expandBoxDescription">
+    {{event.description.text}}
+  </div>
+
+     <button class="registerBtn btn btn-info"><a href="{{event.url}}">Register</a></button>
 </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
 
 </div>

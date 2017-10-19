@@ -9,11 +9,24 @@ angular.module('xposure').service('mainSrvc', function($http) {
 
   this.currentUser = {};
 
-  this.getEvents = () => $http.get('https://www.eventbriteapi.com/v3/events/search/?location.address=dallas,tx&location.within=50mi&sort_by=best&token=VS4PG47YHJGSWEJUEE3Y')
+  this.getEvents = () => $http.get('https://www.eventbriteapi.com/v3/events/search/?location.address=dallas,tx&location.within=20mi&sort_by=best&token=VS4PG47YHJGSWEJUEE3Y')
     .then(response => {
-      console.log(response.data.events);
+      console.log(response.data);
       return response.data.events;
     });
+
+
+ this.categories = {
+     103: "Music", 101: "Business & Professional", 110: "Food & Drink", 113: "Community & Culture", 105: "Performing & Visual Arts",
+     104: "Film, Media & Entertainment", 108: "Sports & Fitness", 107: "Health & Wellness", 102: "Science & Technology", 109: "Travel & Outdoor",
+     111: "Charity & Causes", 114: "Religion & Spirituality", 115: "Family & Education", 116: "Seasonal & Holiday", 112: "Government & Politics",
+     106: "Fashion & Beauty", 117: "Home & Lifestyle", 118: "Auto, Boat & Air", 119: "Hobbies & Special Interest", 199: "Other", 120: "School Activities"
+   };
+
+
+
+
+
 
   this.createUser = (user) => {
     console.log(user)
@@ -25,7 +38,7 @@ angular.module('xposure').service('mainSrvc', function($http) {
 
     $http.get(`https://www.eventbriteapi.com/v3/events/search/?location.address=${city}&location.within=50mi&sort_by=best&token=VS4PG47YHJGSWEJUEE3Y`)
     .then(response => {
-
+      console.log(response.data)
       return response.data;
     })
 
