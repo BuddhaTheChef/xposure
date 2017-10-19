@@ -1,4 +1,4 @@
-angular.module('xposure', ['ui.router','ngFileUpload']).directive('coverflow', function(){
+angular.module('xposure', ['ui.router','ngFileUpload','ngAnimate']).directive('coverflow', function(){
     return{
         restrict: 'E',
         scope: {

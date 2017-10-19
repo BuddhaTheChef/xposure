@@ -28,6 +28,7 @@ angular.module('xposure').service('mainSrvc', function($http) {
 
 
 
+
   this.createUser = (user) => {
     console.log(user)
 

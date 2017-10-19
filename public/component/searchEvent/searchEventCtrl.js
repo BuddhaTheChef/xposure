@@ -31,5 +31,15 @@ $scope.categories = mainSrvc.categories;
   }).catch(err => console.log(err));
 
 
+$scope.categoriesFilter = mainSrvc.categories.filter(id => categories.id);
+
+
+
+
+
+
+
+
+
 
 })

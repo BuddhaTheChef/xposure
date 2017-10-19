@@ -232,7 +232,7 @@ a:hover {
 .home-city-display {
   margin-left: 22%;
 }
-
+/*/////////////////////////////////////////////////////////fixed filter bar/////////////////////////////////////////////////////////////////////////////////////*/
 .filterBoxHeader{
   font-size: 19px;
 background-color: whitesmoke;
@@ -249,6 +249,19 @@ width: -webkit-fill-available;
     position: fixed;
 }
 
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    width: 100%;
+    padding: 0 !important;
+}
+
+.recent1{
+  width: 100%;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .divSpotImg {
   flex-grow: 0;
   flex-shrink: 0;
@@ -374,6 +387,7 @@ box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
   /*background-color: #006C85;*/
   background: linear-gradient(rgba(0,108,133.25), rgba(0,108,133.50));
   padding-top: 30px;
+  min-height: 95vh;
 }
 
 .glyphicon{
@@ -854,4 +868,28 @@ box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 0 1px rgb(0, 97, 119) inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
   background-color: #006C85;
   color: white;
+}
+
+
+
+.ng-hide-add.createdEventsWord{
+  transition: all 1s;
+  transform: translateX(0px);
+}
+
+.ng-hide-add-active.createdEventsWord{
+  transform: translateX(48.7vw);
+}
+
+.ng-hide-remove.savedEventsWord{
+  transition: : all 1s;
+}
+
+.ng-hide-add.savedEventsWord{
+  transition: all 1s;
+  transform: translateX(0px);
+}
+
+.ng-hide-add-active.savedEventsWord{
+  transform: translateX(-48.3vw);
 }

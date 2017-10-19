@@ -2,13 +2,47 @@
 <h1>Searched Events</h1>
 
 <div class="filterBox">
-  <button type="button" class="filterBoxHeader expandbutton btn btn-dark"  ng-click="">Filter By Category  <span class="caret"></span></button>
+  <button  class="filterBoxHeader expandbutton btn btn-primary"  ng-click="display = !display">Filter By Category  <span class="caret"></span></button>
 
-
-  <button type="button" class="filterBoxHeader expandbutton btn btn-dark" ng-click="">Filter By Date  <span class="caret"></span></button>
-  <div>
-
+  <div ng-show="display">
+    <button class="btn btn-default" ng-click="cat = ''">All</button>
+    <button class="btn btn-default" ng-click="cat = '103'">Music</button>
+    <button class="btn btn-default" ng-click="cat = '101'">Business & Professional</button>
+    <button class="btn btn-default" ng-click="cat = '110'">Food & Drink</button>
+    <button class="btn btn-default" ng-click="cat = '113'">Community & Culture</button>
+    <button class="btn btn-default" ng-click="cat = '105'">Performing & Visual Arts</button>
+    <button class="btn btn-default" ng-click="cat = '104'">Film, Media & Entertainment</button>
+    <button class="btn btn-default" ng-click="cat = '108'">Sports & Fitness</button>
+    <button class="btn btn-default" ng-click="cat = '107'">Health & Wellness</button>
+    <button class="btn btn-default" ng-click="cat = '102'">Science & Technology</button>
+    <button class="btn btn-default" ng-click="cat = '109'">Travel & Outdoor</button>
+    <button class="btn btn-default" ng-click="cat = '111'">Charity & Causes</button>
+    <button class="btn btn-default" ng-click="cat = '114'">Religion & Spirituality</button>
+    <button class="btn btn-default" ng-click="cat = '115'">Family & Education</button>
+    <button class="btn btn-default" ng-click="cat = '116'">Seasonal & Holiday</button>
+    <button class="btn btn-default" ng-click="cat = '112'">Government & Politics</button>
+    <button class="btn btn-default" ng-click="cat = '106'">Fashion & Beauty</button>
+    <button class="btn btn-default" ng-click="cat = '117'">Home & Lifestyle</button>
+    <button class="btn btn-default" ng-click="cat = '118'">Auto, Boat & Air</button>
+    <button class="btn btn-default" ng-click="cat = '119'">Hobbies & Special Interest</button>
+    <button class="btn btn-default" ng-click="cat = '199'">School Activities</button>
+    <button class="btn btn-default" ng-click="cat = '120'">Other</button>
   </div>
+
+
+  <button class="filterBoxHeader expandbutton btn btn-primary" ng-click="date = !date">Filter By Date  <span class="caret"></span></button>
+
+  <div ng-show="date" >
+    <button class="btn btn-default" ng-click="toggleColor = !toggleColor">Today</button>
+    <button class="btn btn-default" ng-click="toggleColor = !toggleColor">Tomorrow</button>
+    <button class="btn btn-default" ng-click="toggleColor = !toggleColor">This Week</button>
+    <button class="btn btn-default" ng-click="toggleColor = !toggleColor">Next Week</button>
+    <button class="btn btn-default" ng-click="toggleColor = !toggleColor">This Month</button>
+    <button class="btn btn-default" ng-click="toggleColor = !toggleColor">Next Month</button>
+    <button class="recent1 btn btn-info" ng-click="toggleColor = !toggleColor">Recently Created</button>
+  </div>
+
+
 </div>
 
 <div class="list-align">
@@ -17,7 +51,7 @@
 
 
 
-  <div class="eventList" ng-repeat="event in myEvents track by $index">
+  <div class="eventList" ng-repeat="event in myEvents | filter : {tags: cat } track by $index">
 
   <div class="divForOneEvent">
     <div class="divSpotImg" style="background-image: url('{{event.eventimage}}')">
@@ -58,7 +92,7 @@
 
 
 
-<div class="eventList" ng-repeat="event in events track by $index">
+<div class="eventList" ng-repeat="event in events | filter : {category_id: cat} track by $index">
 
 <div class="divForOneEvent">
   <div class="divSpotImg" style="background-image: url('{{event.logo.original.url}}')">
