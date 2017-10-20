@@ -35,7 +35,7 @@ const {
 const port = 3000;
 
 // our database connection information
-const connectionString = `postgres://${dbUser}@localhost/${database}`;
+const connectionString = `postgres://dcqwllooadrodm:6d49a079017d7d820bb74b1b0ce990312278bc235db52deab50dba72330fb665@ec2-54-83-58-17.compute-1.amazonaws.com:5432/dcot5mjrtketsk?ssl=true`;
 
 // App Declaration
 const app = express();

@@ -23,7 +23,11 @@ angular.module('xposure').controller('profileCtrl', function(mainSrvc, $scope, u
     mainSrvc.profilePicSubmit(first, last, email, file, user).then(result => {
       console.log(result);
       $scope.profilePic = result.data[0].profilepic
+      mainSrvc.getUser()
+        .then(response => mainSrvc.currentUser = response.data[0])
+        .catch(err => err)
     })
+
   }
 
 

@@ -9,7 +9,15 @@ $scope.categories = mainSrvc.categories;
 
   $scope.user = user.data && user.data.err ? user.data.err : user;
 
-
+  $scope.dateFilter = (value) => {
+    console.log('dateFilter value', value)
+    if( value == 'today' ){
+      return $scope.filteredDates = new Date()
+    } else if ( value == 'tomorrow' ){
+      let today = new Date()
+      return $scope.filteredDates = today.setDate(today.getUTCDate() + 1)
+    }
+  }
 
   // console.log(response.events)
   //
@@ -19,7 +27,7 @@ $scope.categories = mainSrvc.categories;
 
 
   // mainSrvc.searchEvents("dallas").then(function(response) {
-  //   console.log(response);
+  //   console.log(response);``
   //   $scope.events = response;
   //
   // })

@@ -30,15 +30,15 @@
   </div>
 
 
-  <button class="filterBoxHeader expandbutton btn btn-primary" ng-click="date = !date">Filter By Date  <span class="caret"></span></button>
+  <button class="filterBoxHeader expandbutton btn btn-primary" ng-click="dateOpen = !dateOpen" >Filter By Date  <span class="caret"></span></button>
 
-  <div ng-show="date" >
-    <button class="btn btn-default" ng-click="toggleColor = !toggleColor">Today</button>
-    <button class="btn btn-default" ng-click="toggleColor = !toggleColor">Tomorrow</button>
-    <button class="btn btn-default" ng-click="toggleColor = !toggleColor">This Week</button>
-    <button class="btn btn-default" ng-click="toggleColor = !toggleColor">Next Week</button>
-    <button class="btn btn-default" ng-click="toggleColor = !toggleColor">This Month</button>
-    <button class="btn btn-default" ng-click="toggleColor = !toggleColor">Next Month</button>
+  <div ng-show="dateOpen" >
+    <button class="btn btn-default" ng-click="dateFilter('today')">Today</button>
+    <button class="btn btn-default" ng-click="dateFilter('tomorrow')">Tomorrow</button>
+    <button class="btn btn-default" ng-click="dateFilter()">This Week</button>
+    <button class="btn btn-default" ng-click="dateFilter()">Next Week</button>
+    <button class="btn btn-default" ng-click="dateFilter()">This Month</button>
+    <button class="btn btn-default" ng-click="dateFilter()">Next Month</button>
     <button class="recent1 btn btn-info" ng-click="toggleColor = !toggleColor">Recently Created</button>
   </div>
 
@@ -51,7 +51,7 @@
 
 
 
-  <div class="eventList" ng-repeat="event in myEvents | filter : {tags: cat } track by $index">
+  <div class="eventList" ng-repeat="event in myEvents | filter : {tags: cat } | filter : filteredDates track by $index">
 
   <div class="divForOneEvent">
     <div class="divSpotImg" style="background-image: url('{{event.eventimage}}')">
@@ -92,7 +92,7 @@
 
 
 
-<div class="eventList" ng-repeat="event in events | filter : {category_id: cat} track by $index">
+<div class="eventList" ng-repeat="event in events | filter : {category_id: cat} | filter : filteredDates track by $index">
 
 <div class="divForOneEvent">
   <div class="divSpotImg" style="background-image: url('{{event.logo.original.url}}')">

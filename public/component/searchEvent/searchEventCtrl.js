@@ -26,9 +26,13 @@ $scope.categories = mainSrvc.categories;
   }
 
   mainSrvc.showEvent(user.authid).then(result => {
-    console.log("post to events",result);
+    console.log("post to events this",result);
     $scope.myEvents = result;
   }).catch(err => console.log(err));
+
+  $scope.dateFilter = (value) => {
+    console.log("dateFilter value:",value)
+  }
 
 
 $scope.categoriesFilter = mainSrvc.categories.filter(id => categories.id);
