@@ -12,10 +12,11 @@ $scope.categories = mainSrvc.categories;
   $scope.dateFilter = (value) => {
     console.log('dateFilter value', value)
     if( value == 'today' ){
-      return $scope.filteredDates = new Date()
+      return $scope.filteredDates = new Date().toString()
     } else if ( value == 'tomorrow' ){
       let today = new Date()
-      return $scope.filteredDates = today.setDate(today.getUTCDate() + 1)
+      return $scope.filteredDates = today.setDate(today.getUTCDate() + 1).toString()
+      console.log('dateFilter value', value)
     }
   }
 
@@ -46,8 +47,60 @@ $scope.categories = mainSrvc.categories;
   }
 
   $scope.events = response.events;
+  console.log($scope.events);
+
+
+
+  mainSrvc.showEvent(user.authid).then(result => {
+    console.log("post to events",result);
+    $scope.myEvents = result;
+  }).catch(err => console.log(err));
+
+
+
+
+
+  $scope.showTodayEvents = () => {
+    let result = mainSrvc.showTodayEvents(response.events);
+    console.log(result)
+    $scope.events = result
+  }
+
+  $scope.showNextWeekEvents = () => {
+    $scope.events = mainSrvc.showNextWeekEvents(response.events)
+  }
+
+  $scope.showThisMonthEvents = () => {
+    $scope.events = mainSrvc.showThisMonthEvents(response.events)
+  }
+
+  $scope.showNextMonthEvents = () => {
+    $scope.events = mainSrvc.showNextMonthEvents(response.events)
+  }
+
+  $scope.showTomorrowEvents = () => {
+    $scope.events = mainSrvc.showTomorrowEvents(response.events)
+  }
+
+  $scope.showThisWeekEvents = () => {
+    $scope.events = mainSrvc.showThisWeekEvents(response.events)
+  }
+
+
+
+
+  $scope.showAllEvents = () => {
+    $scope.events = response.events;
+  }
+
+
+
+
 
   $scope.location = response.location;
+
+
+
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -58,13 +111,4 @@ $scope.savedEventSubmit  = (event) => {
 
 
 }
-
-
-mainSrvc.showEvent(user.authid).then(result => {
-  console.log("post to events",result);
-  $scope.myEvents = result;
-}).catch(err => console.log(err));
-
-
-
 })

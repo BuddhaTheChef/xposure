@@ -16,6 +16,141 @@ angular.module('xposure').service('mainSrvc', function($http) {
     });
 
 
+// let today = moment(today);
+//
+// let tomorrow = moment(today).add(1, 'days');
+// let startOfNextWeek = moment(today).add(1, 'weeks').startOf('isoWeek');
+// let endOfWeekAfter = moment().add(1, 'weeks').endOf('isoWeek');
+
+
+this.showTodayEvents = (events, myEvents) => {
+  let today = new Date()
+  today = today.toISOString()
+  let end = new Date()
+  end.setHours(23,59,59,999)
+  end = end.toISOString()
+  let eventsArr = []
+  _.mapObject(events , x => {
+    let eventDate = x.start.local
+    if(moment(eventDate).isBetween(today, end)){
+      eventsArr.push(x)
+    }
+  })
+
+return eventsArr
+  // console.log(start, end, events)
+}
+
+this.showTomorrowEvents = (events) => {
+  console.log(events)
+  let today = new Date()
+  let tomorrow = moment(today).add(1, 'days').startOf('day');
+  let endOfTomorrow = moment(today).add(1, 'days').endOf('day');
+  let eventsArr = []
+
+  _.mapObject(events, x => {
+    let eventDate = x.start.local
+    if(moment(eventDate).isBetween(tomorrow, endOfTomorrow))
+    eventsArr.push(x)
+  })
+
+  return eventsArr
+}
+
+
+this.showThisWeekEvents = (events) => {
+  console.log(events)
+  let today = new Date()
+  let startOfThistWeek = moment(today).startOf('isoWeek');
+  let endOfThisWeek = moment(today).endOf('isoWeek');
+  let eventsArr = []
+
+  _.mapObject(events, x => {
+    let eventDate = x.start.local
+    if(moment(eventDate).isBetween(startOfThistWeek, endOfThisWeek))
+    eventsArr.push(x)
+  })
+
+  return eventsArr
+}
+
+
+this.showNextWeekEvents = (events) => {
+  console.log(events)
+  let today = new Date()
+  let startOfNextWeek = moment(today).add(1, 'weeks').startOf('isoWeek');
+  let endOfNextWeek = moment(today).add(1, 'weeks').endOf('isoWeek');
+  let eventsArr = []
+
+  _.mapObject(events, x => {
+    let eventDate = x.start.local
+    if(moment(eventDate).isBetween(startOfNextWeek, endOfNextWeek))
+    eventsArr.push(x)
+  })
+
+  return eventsArr
+}
+
+
+
+this.showThisMonthEvents = (events) => {
+  console.log(events)
+  let today = new Date()
+  let startOfThisMonth = moment(today).startOf('months');
+  let endOfThisMonth = moment().endOf('months');
+  let eventsArr = []
+
+  _.mapObject(events, x => {
+    let eventDate = x.start.local
+    if(moment(eventDate).isBetween(startOfThisMonth, endOfThisMonth))
+    eventsArr.push(x)
+  })
+
+  return eventsArr
+}
+
+this.showNextMonthEvents = (events) => {
+  console.log(events)
+  let today = new Date()
+  let startOfNextMonth = moment(today).add(1, 'months').startOf('months');
+  let endOfNextMonth = moment(today).add(1, 'months').endOf('months');
+  let eventsArr = []
+
+  _.mapObject(events, x => {
+    let eventDate = x.start.local
+    if(moment(eventDate).isBetween(startOfNextMonth, endOfNextMonth))
+    eventsArr.push(x)
+  })
+
+  return eventsArr
+}
+
+
+
+
+// this.showWeekAfterEvents = (events, myEvents) => {
+//   let today = new Date()
+//   let startOfWeekAfter = moment(today).add(2, 'weeks').startOf('isoWeek');
+//   let endOfWeekAfter = moment().add(2, 'weeks').endOf('isoWeek');
+//   let eventsArr = []
+//
+//   _.mapObject(events, x => {
+//     let eventDate = x.start.local
+//     if(moment(eventDate).isBetween(startOfWeekAfter, endOfWeekAfter))
+//     eventsArr.push(x)
+//   })
+//
+//   return eventsArr
+// }
+
+
+
+
+
+
+
+
+
  this.categories = {
      103: "Music", 101: "Business & Professional", 110: "Food & Drink", 113: "Community & Culture", 105: "Performing & Visual Arts",
      104: "Film, Media & Entertainment", 108: "Sports & Fitness", 107: "Health & Wellness", 102: "Science & Technology", 109: "Travel & Outdoor",

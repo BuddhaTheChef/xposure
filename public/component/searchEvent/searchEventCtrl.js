@@ -2,6 +2,7 @@ angular.module('xposure').controller('searchEventCtrl', function (mainSrvc, resp
 
 console.log(response, "THIS SUCCKKKS")
   $scope.events = response.events;
+  console.log($scope.events);
 
   $scope.location = response.location;
 
@@ -35,7 +36,42 @@ $scope.categories = mainSrvc.categories;
   }
 
 
-$scope.categoriesFilter = mainSrvc.categories.filter(id => categories.id);
+// $scope.categoriesFilter = mainSrvc.categories.filter(id => categories.id);
+
+
+
+  $scope.showTodayEvents = () => {
+    let result = mainSrvc.showTodayEvents(response.events);
+    console.log(result)
+    $scope.events = result
+  }
+
+  $scope.showNextWeekEvents = () => {
+    $scope.events = mainSrvc.showNextWeekEvents(response.events)
+  }
+
+  $scope.showThisMonthEvents = () => {
+    $scope.events = mainSrvc.showThisMonthEvents(response.events)
+  }
+
+  $scope.showNextMonthEvents = () => {
+    $scope.events = mainSrvc.showNextMonthEvents(response.events)
+  }
+
+  $scope.showTomorrowEvents = () => {
+    $scope.events = mainSrvc.showTomorrowEvents(response.events)
+  }
+
+  $scope.showThisWeekEvents = () => {
+    $scope.events = mainSrvc.showThisWeekEvents(response.events)
+  }
+
+
+
+
+  $scope.showAllEvents = () => {
+    $scope.events = response.events;
+  }
 
 
 
