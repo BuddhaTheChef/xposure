@@ -749,7 +749,7 @@ background: repeating-linear-gradient(whitesmoke,white 0%,whitesmoke 3%);
 
 .myFirstCoverflowCreated {
   margin-top: 250px;
-  margin-bottom: 30vh;
+  margin-bottom: 22vh;
 }
 
 .myFirstCoverflowSaved {
@@ -1008,7 +1008,7 @@ text-shadow: 0 0 20px black;
   margin-left: auto;
   margin-right: auto;
   height: 200px;
-  box-shadow: 0px 5px 30px 2px rgba(0, 0, 0, 0.50);
+  box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.50);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1042,6 +1042,15 @@ width: -webkit-fill-available;
   background-color: rgba(248, 248, 255,0.9);
   margin-left: 5%;
   margin-right: 3%;
+}
+
+.mobilecoverflowButton{
+  margin-left: 5%;
+    width: 90%;
+    box-shadow: 0px 3px 30px 2px rgba(0, 0, 0, 0.50);
+margin-top: -1%;
+padding-top: 3% !important;
+
 }
 
 
