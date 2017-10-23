@@ -29,6 +29,8 @@ $scope.categories = mainSrvc.categories;
   mainSrvc.showEvent(user.authid).then(result => {
     console.log("post to events this",result);
     $scope.myEvents = result;
+    $scope.allMyEvents = result;
+    return result;
   }).catch(err => console.log(err));
 
   $scope.dateFilter = (value) => {
@@ -41,35 +43,40 @@ $scope.categories = mainSrvc.categories;
 
 
   $scope.showTodayEvents = () => {
-    let result = mainSrvc.showTodayEvents(response.events);
-    console.log(result)
-    $scope.events = result
+    $scope.events = mainSrvc.showTodayEvents(response.events);
+    $scope.myEvents = mainSrvc.showTodayEvents($scope.allMyEvents)
   }
 
   $scope.showNextWeekEvents = () => {
     $scope.events = mainSrvc.showNextWeekEvents(response.events)
+    $scope.myEvents = mainSrvc.showNextWeekEvents($scope.allMyEvents)
   }
 
   $scope.showThisMonthEvents = () => {
     $scope.events = mainSrvc.showThisMonthEvents(response.events)
+    $scope.myEvents = mainSrvc.showThisMonthEvents($scope.allMyEvents)
   }
 
   $scope.showNextMonthEvents = () => {
     $scope.events = mainSrvc.showNextMonthEvents(response.events)
+    $scope.myEvents = mainSrvc.showNextMonthEvents($scope.allMyEvents)
   }
 
   $scope.showTomorrowEvents = () => {
     $scope.events = mainSrvc.showTomorrowEvents(response.events)
+    $scope.myEvents = mainSrvc.showTomorrowEvents($scope.allMyEvents)
   }
 
   $scope.showThisWeekEvents = () => {
     $scope.events = mainSrvc.showThisWeekEvents(response.events)
+    $scope.myEvents = mainSrvc.showThisWeekEvents($scope.allMyEvents)
   }
 
 
 
 
   $scope.showAllEvents = () => {
+    $scope.myEvents = $scope.allMyEvents;
     $scope.events = response.events;
   }
 

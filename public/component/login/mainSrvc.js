@@ -31,7 +31,7 @@ this.showTodayEvents = (events, myEvents) => {
   end = end.toISOString()
   let eventsArr = []
   _.mapObject(events , x => {
-    let eventDate = x.start.local
+    let eventDate = x.start ? x.start.local : x.starts
     if(moment(eventDate).isBetween(today, end)){
       eventsArr.push(x)
     }
@@ -49,7 +49,7 @@ this.showTomorrowEvents = (events) => {
   let eventsArr = []
 
   _.mapObject(events, x => {
-    let eventDate = x.start.local
+    let eventDate = x.start ? x.start.local : x.starts
     if(moment(eventDate).isBetween(tomorrow, endOfTomorrow))
     eventsArr.push(x)
   })
@@ -59,17 +59,23 @@ this.showTomorrowEvents = (events) => {
 
 
 this.showThisWeekEvents = (events) => {
-  console.log(events)
+  console.log("this week", events)
   let today = new Date()
   let startOfThistWeek = moment(today).startOf('isoWeek');
   let endOfThisWeek = moment(today).endOf('isoWeek');
   let eventsArr = []
 
   _.mapObject(events, x => {
-    let eventDate = x.start.local
+    let eventDate = x.start ? x.start.local : x.starts
     if(moment(eventDate).isBetween(startOfThistWeek, endOfThisWeek))
     eventsArr.push(x)
   })
+  // _.mapObject(myEvents, x => {
+  //   let eventDate = x.starts;
+  //   console.log(moment(eventDate));
+  //   if(moment(eventDate).isBetween(startOfThistWeek, endOfThisWeek))
+  //   eventsArr.push(x)
+  // })
 
   return eventsArr
 }
@@ -83,7 +89,7 @@ this.showNextWeekEvents = (events) => {
   let eventsArr = []
 
   _.mapObject(events, x => {
-    let eventDate = x.start.local
+    let eventDate = x.start ? x.start.local : x.starts
     if(moment(eventDate).isBetween(startOfNextWeek, endOfNextWeek))
     eventsArr.push(x)
   })
@@ -101,7 +107,7 @@ this.showThisMonthEvents = (events) => {
   let eventsArr = []
 
   _.mapObject(events, x => {
-    let eventDate = x.start.local
+    let eventDate = x.start ? x.start.local : x.starts
     if(moment(eventDate).isBetween(startOfThisMonth, endOfThisMonth))
     eventsArr.push(x)
   })
@@ -117,7 +123,7 @@ this.showNextMonthEvents = (events) => {
   let eventsArr = []
 
   _.mapObject(events, x => {
-    let eventDate = x.start.local
+    let eventDate = x.start ? x.start.local : x.starts
     if(moment(eventDate).isBetween(startOfNextMonth, endOfNextMonth))
     eventsArr.push(x)
   })
@@ -172,7 +178,7 @@ this.showNextMonthEvents = (events) => {
 
   this.searchEvents = (city) =>
 
-    $http.get(`https://www.eventbriteapi.com/v3/events/search/?location.address=${city}&location.within=50mi&sort_by=best&token=VS4PG47YHJGSWEJUEE3Y`)
+    $http.get(`https://www.eventbriteapi.com/v3/events/search/?location.address=${city}&location.within=100mi&sort_by=best&token=VS4PG47YHJGSWEJUEE3Y`)
     .then(response => {
       console.log(response.data)
       return response.data;
