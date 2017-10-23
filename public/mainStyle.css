@@ -411,7 +411,7 @@ display: none;
 
 .profileContentTop {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
-  background-color: #F2F2F2;
+background: repeating-linear-gradient(whitesmoke,white 0%,whitesmoke 3%);
 }
 
 .progilePageHeader {
