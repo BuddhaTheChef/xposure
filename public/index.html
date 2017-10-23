@@ -62,7 +62,7 @@
 
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <div class="container-fluid">
- <nav class="navbar navbar-inverse navbar-default" role="navigation">
+ <nav class="navbar navbar-inverse navbar-default" role="navigation" ng-controller="indexCtrl">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -78,7 +78,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/auth">Login</a></li>
+        <div ng-show="!user.authid"><li><a href="/auth">Login</a></li></div>
+        <div ng-show="user.authid"><li><a href="/auth/logout">Logout</a></li></div>
         <li><a ui-sref="home">Browse</a></li>
         <li><a ui-sref="profile">Profile</a></li>
         <li><a ui-sref="event">Create</a></li>
