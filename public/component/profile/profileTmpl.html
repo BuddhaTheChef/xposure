@@ -51,6 +51,31 @@
     <coverflow list="mySavedEvents" delete="deleteSavedEvent(event)"></coverflow>
   </div>
 
+
+<!-- ////////////////////////////////////////////////mobileview////////////////////////////////////////////////////// -->
+<div class="mobileCoverflow">
+  <div class="mobileRepeat" ng-repeat="event in mySavedEvents track by $index">
+    <div class="mobileOneEvent">
+
+      <div class="mobiledivSpotImg"style="background-image: url('{{event.image}}')">
+        <div class="mobileEventDetailContain">
+          <h3 class="mobileSavedTitle">{{event.title}}</h3>
+          <h5>{{event.start | date: 'short'}} TO {{event.ends | date: 'short'}}</h5>
+          <h5>{{event.location}}</h5>
+
+        </div>
+
+
+      </div>
+      <!-- <button class="coverflowButton btn btn-danger" ng-click="deleteSavedEvent(event)"><span class="glyphicon glyphicon-trash"></span></button> -->
+
+    </div>
+  </div>
+</div>
+
+
+
+
 </div>
 
 
@@ -62,8 +87,33 @@
 
   <div class="myFirstCoverflowCreated">
     <coverflow list="myEvents"  delete="deleteEvent(event)"></coverflow>
-
   </div>
+
+  <!-- ////////////////////////////////////////////////mobileview////////////////////////////////////////////////////// -->
+  <div class="mobileCoverflow">
+    <div class="mobileRepeat" ng-repeat="event in myEvents track by $index">
+      <div class="mobileOneEvent">
+
+        <div class="mobiledivSpotImg"style="background-image: url('{{event.eventimage}}')">
+          <div class="mobileEventDetailContain">
+            <h3 class="mobileSavedTitle">{{event.title}}</h3>
+            <h5>{{event.start | date: 'short'}} TO {{event.ends | date: 'short'}}</h5>
+            <h5>{{event.location}}</h5>
+
+          </div>
+
+
+        </div>
+        <!-- <button class="coverflowButton btn btn-danger" ng-click="deleteSavedEvent(event)"><span class="glyphicon glyphicon-trash"></span></button> -->
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
 
   </div>
 

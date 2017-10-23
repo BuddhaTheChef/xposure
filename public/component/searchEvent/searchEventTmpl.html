@@ -1,5 +1,10 @@
+
+
 <div class="searchevent-background">
-<h1 class="headerForHome">XPOSURE</h1>
+  <div class="wowHeader">
+    <h1 class="headerForHome" style="background-image: url('https://images.unsplash.com/44/xKNCBEgSTUGbgBoYgJ90_Skyline.jpg?w=3151')">XPOSURE</h1>
+  </div>
+
 
 <div class="filterBox">
   <button  class="filterBoxHeader expandbutton btn btn-primary"  ng-click="display = !display">Filter By Category  <span class="caret"></span></button>
@@ -71,8 +76,9 @@
   </div>
   <button type="button" class="expandbutton btn btn-dark" ng-click="expand[category]=!expand[category]"><span class="caret"></span></button>
   <div class="expandBox" ng-show="expand[category]" >
-    <h4>Description</h4>
+    <h4>Description<button class="mobileSaveButtonEvent btn-xs btn-primary" ng-click="savedEventSubmit(event)"><span class="glyphicon glyphicon-plus"></span></button></span></h4>
     <div class="expandBoxDescription">
+      <h4 class="mobileTitle">{{event.title}}</h4>
       {{event.eventdescription}}
     </div>
 
@@ -117,9 +123,10 @@
 <button type="button" class="expandbutton btn btn-dark" ng-click="expand[category]=!expand[category]"><span class="caret"></span></button>
 
 <div class="expandBox" ng-show="expand[category]" >
-  <h4>Description</h4>
+  <h4>Description<button class="mobileSaveButtonEvent btn-xs btn-primary" ng-click="savedEventSubmit(event)"><span class="glyphicon glyphicon-plus"></span></button></span></h4>
 
   <div class="expandBoxDescription">
+    <h4 class="mobileTitle">{{event.name.text}}</h4>
     {{event.description.text}}
   </div>
 
